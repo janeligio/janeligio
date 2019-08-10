@@ -1,0 +1,107 @@
+.App {
+}
+
+/* Core Styles */
+
+img {
+	display: block;
+	width:100%;
+	height: auto;
+}
+h1, h2, h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+.btn {
+	display: inline-block;
+	background: #333;
+	color: white;
+	text-decoration: none;
+	padding: .5em 1em;
+	border: 1px solid #666;
+/*	margin: .5em 0;
+*/}
+.btn:hover {
+	background: #EAEAEA;
+	color: #333;
+}
+
+header.App-header {
+/*	font-family: 'Titillium Web', sans-serif;
+*/	font-family: 'B612', sans-serif;
+/*	font-size: 2em;
+*//*	background: rgb(2,0,36);
+	background: -moz-linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	background: -webkit-linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
+  	background-repeat: no-repeat;
+  */
+  min-height: 450px;
+}
+
+header p {
+	font-size: 2em;
+}
+
+.content-title{ 
+ }
+
+#favorite-pics ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#favorite-pics li {
+	margin-bottom: 1em;
+}
+
+.card-content {
+	padding: 2em;
+}
+
+#myname {
+	text-align: center;
+	background: #87CFFA;
+	color: white;
+	margin: 0;
+	padding: 1em 0 0 0.7;	
+	cursor: pointer;
+}
+
+img.headshot {
+	border-radius: 50%;
+  float: right;
+}
+
+img.makapuu-picture{
+/*	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+*/
+  box-shadow: 3px 3px 1px #ccc;
+  -webkit-box-shadow: 3px 3px 1px #ccc;
+  -moz-box-shadow: 3px 3px 1px #ccc;
+}
+
+
+#projects {
+ background: #4A56EA;
+ color: #FFF;
+}
+
+#resume {
+ background: #FFDE83;
+}
+
+#interests {
+ background: #FFC783;
+}
+
+#favorite-movies {
+ background: #5FBDF4;
+}
