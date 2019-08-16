@@ -23,8 +23,13 @@ const border = {
 }
 function App() {
 
-  const MakapuuURL = './public/makapuu.jpg';
-  return (
+	const favPicsStyle = {
+		display:'flex', 
+		alignItems:'flex-start', 
+		flexWrap:'wrap',
+		justifyContent:'space-around'
+	};
+	return (
     <div className="App">
       <header className="App-header grid">
 	      <h1 style={{fontSize:"3em"}} id="myname">
@@ -39,71 +44,46 @@ function App() {
       </header>
 
       <main className="main">
+		  
+	  <h2 className="content-title" style={{color:'white', background:'#9299FB'}}>Favorite Pictures</h2>
 
-      	<div id="favorite-pics" className="grid" style={{background:'#9299FB'}}>
-			<div style={{display:'flex', alignItems:'flex-start', flexWrap:'wrap',
-			justifyContent:'space-around'
-			}}>
-			<FavoritePicture picture={Makapuu} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Elither_1} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Elither_2} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Elither_3} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Ralph} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Karaoke} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Tastetea} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={CrouchingLion} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={MakapuuHike} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Momi} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Pali} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={PattyMills} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Smoking} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Waikiki} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Hairspray} alt="makapuu" content={<p>hello</p>}/>
-			<FavoritePicture picture={Charlie} alt="makapuu" content={<p>hello</p>}/>
+      	<div id="favorite-pics" className="grid" style={{background:''}}>
+			<div style={{margin:'1em',}}>
+				<div className="favorites-pics-container" style={{display:'flex',flexWrap:'no-wrap'}}>
+				<FavoritePicture picture={Makapuu} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Smoking} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Pali} alt="makapuu" content={<p>hello</p>}/>
+				</div>
+				<div className="favorites-pics-container" style={{display:'flex'}}>
+				<FavoritePicture picture={MakapuuHike} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Waikiki} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Charlie} alt="makapuu" content={<p>hello</p>}/>
+				</div>
+				<div className="favorites-pics-container" style={{display:'flex'}}>
+				<FavoritePicture picture={CrouchingLion} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Elither_1} alt="makapuu" content={<p>hello</p>}/>
+				</div>
+				<div className="favorites-pics-container" style={{display:'flex'}}>
+				<FavoritePicture picture={Elither_2} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Elither_3} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Ralph} alt="makapuu" content={<p>hello</p>}/>
+				</div>
+				<div className="favorites-pics-container" style={{display:'flex'}}>
+				<FavoritePicture picture={Karaoke} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Tastetea} alt="makapuu" content={<p>hello</p>}/>
+				</div>
+				<div className="favorites-pics-container" style={{display:'flex'}}>
+				<FavoritePicture picture={Momi} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={PattyMills} alt="makapuu" content={<p>hello</p>}/>
+				<FavoritePicture picture={Hairspray} alt="makapuu" content={<p>hello</p>}/>
+				</div>
 			</div>
-		  <div className="content-wrap">
-      	  	<h2 className="content-title" style={{color:'white'}}>Favorite Pictures</h2>
-      	  		<ul>
-      	  			<li>
-      	  				<div className="card">
-				 		<img className="makapuu-pic" src={Makapuu} alt="Me at makapu'u"/>
-		 		   	     <div className="card-content">
-			 		   	     <p>Briane took this picture.</p>
-					   	     <p>We were messing around with the poses.</p>
-					   	     <p>It was a pretty fun day to be honest, even if it was really hot and my hair kept
-					   	     slapping my face every couple seconds.</p>
-					   	 </div>
-						 </div>		   	        
-					</li>
-      	  		</ul>
-	   	    </div>
-	      	 <div className="content-wrap">
-      	  		<ul>
-      	  			<li>
-      	  				<div className="card">
-				 		<img className="tastetea" src={Tastetea} alt="Photo at Taste Tea"/>
-		 		   	     <div className="card-content">
-						<p>In culpa esse ullamco sunt elit adipisicing ipsum do. Ea culpa ipsum elit laborum cillum. Dolore ipsum fugiat consectetur labore. Cupidatat veniam officia do sunt quis voluptate excepteur sint. Nulla dolore fugiat tempor consequat commodo aute. Velit ea eu ipsum voluptate quis cupidatat tempor qui Lorem sunt.</p>
-					   	 </div>
-						 </div>		   	        
-					</li>
-      	  		</ul>
-	   	    </div>
-
 	   	   </div>
 
-	   	<Section id="projects" title="Projects" content={
-	   		<p>test</p>
-	   	}/>
-	   	<Section id="resume" title="Resume" content={
-	   		<p>test</p>
-	   	}/>
-	   	<Section id="interests" title="Interests" content={
-	   		<p>test</p>
-	   	}/>
-	   	<Section id="favorite-movies" title="Favorite Movies" content={
-	   		<p>test</p>
-	   	}/>
+	   	<Section id="projects" title="Projects"/>
+	   	<Section id="resume" title="Resume"/>
+	   	<Section id="interests" title="Interests"/>
+	   	<Section id="favorite-movies" title="Favorite Movies"/>
     </main>
     </div>
   );
@@ -118,18 +98,19 @@ const Section = ({id, title, content}) => (
       	</div>
 );
 
+// const FavoritePicture = ({picture, alt, content}) => {
+// 	return (
+// 		<div className="card-picture" style={{margin:'1em'}} id="makapuu-pic">
+// 			<img style={{borderRadius:'5%'}} src={picture} alt={alt} />
+// 	 	</div>		   	        
+// 	);
+// };
 const FavoritePicture = ({picture, alt, content}) => {
 	return (
-		<div className="card-picture" id="makapuu-pic">
-			<img style={{borderTopLeftRadius:'5%',
-			borderTopRightRadius:'5%'}} src={picture} alt={alt} />
-		 	<div className="card-picture-content">
-			{content}
-			</div>
-	 	</div>		   	        
+		<img className="card-picture"
+		 style={{borderRadius:'5%', margin: '1em'}} src={picture} alt={alt} />
 	);
 };
-
 const Links = () => (
 	<React.Fragment>
 		  <a href="#favorite-pics" class="btn">Favorite Pictures</a>
