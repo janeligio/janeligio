@@ -70,17 +70,6 @@ header p {
 	align-items: center;
  }
 
-#favorite-pics ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-#favorite-pics li {
-	margin-bottom: 1em;
-}
-
-
-
 .card-content {
 	padding: 2em;
 }
@@ -107,30 +96,37 @@ img.makapuu-picture{
   -moz-box-shadow: 3px 3px 1px #ccc;
 }
 
-.card-picture {
+@media (max-width: 400px) {
+	.favorite-pics-container {
+	  display: block;
+	}
+  }
+div.favorite-pics-container {
+	/* display:flex;
+	flex-direction: row; */
+	/* flex-wrap: wrap; */
+	/* justify-content: center; */
+}
+img.card-picture {
+	display: block;
 	flex: 1;
-	flex-basis: 300px;
+	/* flex-basis: 300px; */
 	max-width: 30%;
-	border-radius: 5%;
+	width:30%;
+	/* border-radius: 5%; */
 	background: #FFF;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: auto;  /* Magic! */
+	margin: auto;
+	/* margin: 0 .2em; */
+	border: 2px solid #000;
 	transition: 0.2s;
 }
-
-
-
 .card-picture:hover {
 	transform: scale(0.9, 0.9);
 	box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
     -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
-
-.favorite-pics-container {
-	flex-wrap: wrap;
-	justify-content: center;
 }
 #projects {
  background: #4A56EA;
