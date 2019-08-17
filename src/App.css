@@ -15,9 +15,9 @@
 /* Core Styles */
 
 img {
-	display: block;
+	/* display: block;
 	width:100%;
-	height: auto;
+	height: auto; */
 }
 h1, h2, h3 {
 	margin: 0;
@@ -151,3 +151,10 @@ img.makapuu-picture{
  background: #5FBDF4;
  color: #FFF;
 }
+
+.list-transition-enter-active {
+	top: 45px;
+	max-height: 200px;
+
+	transition: all 400ms;
+	}

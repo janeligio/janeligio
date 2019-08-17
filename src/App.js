@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { CSSTransition } from "react-transition-group";
 import Makapuu from './public/makapuu.jpg';
 import Headshot from './public/janheadshot.jpg';
 import Tastetea from './public/tastetea.JPG';
@@ -18,10 +19,22 @@ import Ralph from './public/ralph.PNG';
 import Smoking from './public/smoking.jpg';
 import Waikiki from './public/waikiki.JPG';
 
+import hdcc1 from './hdccproject_gifs/all sites.gif';
+import hdcc2 from './hdccproject_gifs/network.gif';
+import hdcc3 from './hdccproject_gifs/create.gif';
+import hdcc4 from './hdccproject_gifs/all sites printing.gif';
+
+import { FaGithub } from 'react-icons/fa';
+import {MdExpandMore, MdExpandLess} from 'react-icons/md';
+
 const border = {
 	border: '1px solid black'
 }
 function App() {
+	const [showHDCC, setShowHDCC] = React.useState(false);
+	const [showJobMelon, setShowJobMelon] = React.useState(false);
+	const [showShooots, setShowShooots] = React.useState(false);
+	const [showTasteTea, setShowTasteTea] = React.useState(false);
 
 	const favPicsStyle = {
 		display:'flex', 
@@ -31,7 +44,7 @@ function App() {
 	};
 	return (
     <div className="App">
-      <header className="App-header grid">
+      <header style={{height:'100vh'}} className="App-header grid">
 	      <h1 style={{fontSize:"3em"}} id="myname">
 	      {`<jan.io>`}
 	      </h1>
@@ -81,6 +94,77 @@ function App() {
 	   	   </div>
 
 	   	<Section id="projects" title="Projects"/>
+		<div style={{
+			display:'flex',
+			flexDirection:'column',
+			alignItems: 'center'
+		}}>
+
+			<h3>HDCC Job Sites</h3>
+			<p>MongoDB, ExpressJS, React, Node</p>
+				<div>
+					<Link link="https://github.com/janeligio/hdccproject" title={<FaGithub size="2em"/>}/>
+				</div>
+			<CSSTransition
+			in={showHDCC}
+			timeout={0}
+			classNames="list-transition"
+			unmountOnExit
+			appear
+      		  >
+			<>
+			<ProjectGif gif={hdcc1} alt="HDCC All Sites"/>
+			<ProjectGif gif={hdcc2} alt="HDCC All Sites"/>
+			<ProjectGif gif={hdcc3} alt="HDCC All Sites"/>
+			<ProjectGif gif={hdcc4} alt="HDCC All Sites"/>
+			</>
+			</CSSTransition>
+			{!showHDCC 
+			? 	<MdExpandMore size='2em' onClick={() => setShowHDCC(!showHDCC)}/>
+			:   <MdExpandLess size='2em' onClick={() => setShowHDCC(!showHDCC)}/>
+			}
+
+			<h3>Job Melon</h3>
+			<p>MongoDB, ExpressJS, React, Redux, Node</p>
+				<div>
+					<Link link="https://github.com/janeligio/jobmelon" title={<FaGithub size="2em"/>}/>
+				</div>
+			<CSSTransition
+			in={showJobMelon}
+			timeout={0}
+			classNames="list-transition"
+			unmountOnExit
+			appear
+      		  >
+			<>
+			<p>TODO</p>
+			</>
+			</CSSTransition>
+			{!showJobMelon
+			? 	<MdExpandMore size='2em' onClick={() => setShowJobMelon(!showJobMelon)}/>
+			:   <MdExpandLess size='2em' onClick={() => setShowJobMelon(!showJobMelon)}/>
+			}
+			
+			<h3>Shooots</h3>
+			<p>MeteorJS, MongoDB</p>
+				<div>
+					<Link link="https://github.com/shooots/shooots" title={<FaGithub size="2em"/>}/>
+				</div>
+			<CSSTransition
+			in={showShooots}
+			timeout={0}
+			classNames="list-transition"
+			unmountOnExit
+			appear
+      		  >
+			<>
+			<p>TODO</p>
+			</>
+			</CSSTransition>
+			{!showShooots
+			? 	<MdExpandMore size='2em' onClick={() => setShowShooots(!showShooots)}/>
+			:   <MdExpandLess size='2em' onClick={() => setShowShooots(!showShooots)}/>
+			}		</div>
 	   	<Section id="resume" title="Resume"/>
 	   	<Section id="interests" title="Interests"/>
 	   	<Section id="favorite-movies" title="Favorite Movies"/>
@@ -111,6 +195,21 @@ const FavoritePicture = ({picture, alt, content}) => {
 		 style={{borderRadius:'5%', margin: '1em'}} src={picture} alt={alt} />
 	);
 };
+
+const ProjectGif = ({gif, alt, action}) => (
+	<img onClick={action} style={{
+		width:'60%',
+		boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)',
+		margin:'1em'
+	}} src={gif} alt={alt}/>
+);
+
+const Link = ({link, title}) => (
+	<a href={link} target="_blank" style={{
+		color:"black",
+		textDecoration: "none"
+	}}>{title}</a>
+);
 const Links = () => (
 	<React.Fragment>
 		  <a href="#favorite-pics" class="btn">Favorite Pictures</a>
