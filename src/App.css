@@ -1,24 +1,10 @@
-@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
-	max-width: 320px;
-}
-@media (min-width:400)  { }
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
 .App {
 	background: #FFF;
 
 	max-width: 700px;
 }
 
-/* Core Styles */
-
-img {
-	/* display: block;
-	width:100%;
-	height: auto; */
-}
 h1, h2, h3 {
 	margin: 0;
 	padding: 1em 0;
@@ -64,7 +50,7 @@ header p {
 .content-title{ 
 	font-weight: 1000;
 	font-size: 3em;
-	height: 300px;
+	height: 150px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -101,18 +87,20 @@ img.makapuu-picture{
 	  display: block;
 	}
   }
-div.favorite-pics-container {
+
+  .favorite-pics-container {
 	/* display:flex;
 	flex-direction: row; */
 	/* flex-wrap: wrap; */
 	/* justify-content: center; */
 }
-img.card-picture {
+div.card-picture {
 	display: block;
 	flex: 1;
 	/* flex-basis: 300px; */
 	max-width: 30%;
 	width:30%;
+	height: 150px;
 	/* border-radius: 5%; */
 	background: #FFF;
 	background-position: center;
@@ -120,13 +108,21 @@ img.card-picture {
 	background-size: cover;
 	margin: auto;
 	/* margin: 0 .2em; */
-	border: 2px solid #000;
+	/* border: 2px solid #000; */
 	transition: 0.2s;
 }
-.card-picture:hover {
+div.card-picture img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+
+}
+div.card-picture img:hover {
 	transform: scale(0.9, 0.9);
-	box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
+	/* box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+	-5px -5px 30px 15px rgba(0,0,0,0.22); */
+	/* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
+
 }
 #projects {
  background: #4A56EA;

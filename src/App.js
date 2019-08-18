@@ -26,6 +26,11 @@ import hdcc2 from './hdccproject_gifs/network.gif';
 import hdcc3 from './hdccproject_gifs/create.gif';
 import hdcc4 from './hdccproject_gifs/all sites printing.gif';
 
+import messi1 from './interests/messi1.jpg';
+import IsThisIt from './interests/isthisit.jpg';
+import Freudian from './interests/freudian.jpg';
+import BeforeSunrise from './interests/beforesunrise.jpg';
+
 import { 
 	FaGithub, 
 	FaStar, 
@@ -44,10 +49,9 @@ function App() {
 	const [showTasteTea, setShowTasteTea] = React.useState(false);
 
 	const favPicsStyle = {
-		display:'flex', 
-		alignItems:'flex-start', 
-		flexWrap:'wrap',
-		justifyContent:'space-around'
+		display:'flex',
+		justifyContent:'space-around', 
+		margin:'1em'
 	};
 	return (
     <div className="App">
@@ -61,7 +65,12 @@ function App() {
 		      </div>
 		      <p style={{flex:1}}>Aspiring web developer.</p>
 		  </div>
-		  <div style={{display:'flex', justifyContent:'center', paddingBottom:'3em'}}>
+		  <div style={{
+			display:'flex', 
+			justifyContent:'center', 
+			paddingTop:'1em',
+			paddingBottom:'3em',
+			}}>
 			<Link link="https://github.com/janeligio" title={<FaGithub size="2em"/>}/> 
 			<Link link="https://www.linkedin.com/in/jan-iverson-eligio-4a7756146/" title={<FaLinkedin size="2em" color="#0077B5"/>}/> 
 			<Link link="https://www.instagram.com/_jan_da_man_/" title={<FaInstagram size="2em" color="#c32aa3"/>}/>
@@ -74,7 +83,7 @@ function App() {
 
 				<div className="favorites-pics-container" style={{
 					display:'flex',
-					justifyContent:'space-around', 
+					justifyContent:'space-around',
 					margin:'1em'
 				}}>
 				<FavoritePicture picture={Makapuu} alt="makapuu" content={<p>hello</p>}/>
@@ -92,7 +101,6 @@ function App() {
 				</div>
 				<div className="favorites-pics-container" style={{
 					display:'flex',
-					
 					justifyContent:'space-around',
 					margin:'1em'
 				}}>
@@ -178,7 +186,7 @@ function App() {
 			}
 			
 			<h3>Shooots</h3>
-			<p>MeteorJS, MongoDB</p>
+			<p>MeteorJS</p>
 				<div>
 					<Link link="https://github.com/shooots/shooots" title={<FaGithub size="2em"/>}/>
 				</div>
@@ -219,29 +227,92 @@ function App() {
 			<div style={{
 				margin:'1em 0'
 			}}>
-				<h4>Skills</h4>
-				<ul style={{listStyleType:'none'}}>
-				<li>JavaScript/ES6 <Rating rating={4}/></li>
-				<li>React <Rating rating={4}/></li>
-				<li>HTML <Rating rating={3}/></li>
-				<li>CSS <Rating rating={3}/></li>
-				<li>Git <Rating rating={2}/></li>
-				<li>C <Rating rating={3}/></li>
-				<li>C++ <Rating rating={2}/></li>
-				</ul>
+				<h4 style={{marginBottom:0}}>Skills</h4>
+				<div style={{display:'flex', flexWrap:'wrap'}}>
+				{ <RatingTable data={[
+					{name: "JavaScript/ES6", rating: 4},
+					{name: "React", rating: 4},
+					{name: "HTML", rating: 3},
+					{name: "CSS", rating: 3},
+				]}/>
+				}
+				{ <RatingTable data={[
+
+					{name: "Git", rating: 2},
+					{name: "Java", rating: 2},
+					{name: "C", rating: 3},
+					{name: "C++", rating: 2}
+				]}/>
+				}
+				</div>
 			</div>
 			<div style={{
 				margin:'1em 0'
 			}}>
-				<h4>Experience</h4>
-				<h5>Taste Tea</h5>
-				<h5>Web App developer</h5>
-				<h5>Hawaiian Dreding Construction Co.</h5>
 			</div>
 		</div>
 
 	   	<Section id="interests" title="Interests"/>
-	   	<Section id="favorite-movies" title="Favorite Movies"/>
+		<div style={{
+			padding:'1em',
+			display:'flex',
+			flexDirection:'column',
+			alignItems: 'center',
+		}}>
+			<h3>Messi</h3>
+			<div style={{width:'40%'}}>
+			<img src={messi1} alt="Lionel Messi" style={{
+				height: '100%',
+				width: '100%',
+				objectFit: 'contain',
+				boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)',
+			}}/>
+			</div>
+			<p>The best football player to grace the earth.</p>
+
+			<h3><em>Is This It (2001)</em></h3>
+			<p style={{
+				paddingTop:0,
+				lineHeight: '.5em',
+				fontSize: '.8em'
+			}}>The Strokes</p>
+			<img src={IsThisIt} alt="Is This It (2001)" style={{
+				width:150,
+				height:150,
+				boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)',
+			}}/>
+
+			<p>Perfect alternative rock album. Nostalgia.</p>
+
+			<h3 style={{lineHeight:'.1em'}}><em>Freudian (2018)</em></h3>
+			<p style={{
+				paddingTop:0,
+				lineHeight: '.5em',
+				fontSize: '.8em'
+			}}>Daniel Caesar</p>
+			<img src={Freudian} alt="Freudian (2001)" style={{
+				width:150,
+				height:150,
+				boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)',
+			}}/>
+			<p>Pure love. My summer 2018.</p>
+
+			<h3><em>Before Sunrise</em></h3>
+			<p style={{
+				paddingTop:0,
+				lineHeight: '.5em',
+				fontSize: '.8em'
+			}}>1995, Romance</p>
+			<div style={{width:'40%'}}>
+				<img src={BeforeSunrise} alt="Before Sunrise (1995)" style={{
+					height: '100%',
+					width: '100%',
+					objectFit: 'contain',
+					boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)',
+				}}/>
+			</div>
+			<p>Authentic. Realistically poignant.</p>
+		</div>
     </main>
     </div>
   );
@@ -256,33 +327,69 @@ const Section = ({id, title, content}) => (
       	</div>
 );
 
-const Rating = ({rating}) => {
+const Rating = ({skill, rating}) => {
 	const isFloat = rating % 1 !== 0;
 	let elements = []
 	_.times(Math.trunc(rating), 
 		() => elements = [...elements, <FaStar size="1em"/>]);
 	return (
-		<>
+		<li style={{display:'flex'}}>
+		<p style={{flex:1, width:100, border:'1px solid black'}}>{skill}</p>
+
+		<div style={{
+			flex:2,
+			width: 100,
+			border:'1px solid black'
+			}}>
 		{
 			elements.map(el => el)
 		}
 		{ isFloat && <FaStarHalfAlt size="1em"/>}
-		</>
+		</div>
+		</li>
 	)
 }
 
-// const FavoritePicture = ({picture, alt, content}) => {
-// 	return (
-// 		<div className="card-picture" style={{margin:'1em'}} id="makapuu-pic">
-// 			<img style={{borderRadius:'5%'}} src={picture} alt={alt} />
-// 	 	</div>		   	        
-// 	);
-// };
-const FavoritePicture = ({picture, alt, content}) => {
+const RatingTable = ({data}) => {
 	return (
-		<img className="card-picture" src={picture} alt={alt} />
+		<table style={{width:'50%'}}>
+			{
+			data.map(skill => {
+				const isFloat = skill.rating % 1 !== 0;
+				let elements = [];
+				_.times(Math.trunc(skill.rating), 
+					() => elements = [...elements, <FaStar size=".8em"/>]);
+				return (
+					<tr>
+						<td>{skill.name}</td>
+						<td>
+							{
+								elements.map(el => el)
+							}
+							{ isFloat && <FaStarHalfAlt size=".8em"/>}	
+						</td>
+					</tr>
+					);
+			})
+			}
+		</table>
 	);
 };
+
+const FavoritePicture = ({picture, alt, content}) => {
+	return (
+		<div className="card-picture">
+			<img src={picture} alt={alt}  style={{
+				boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)',
+			}}/>
+	 	</div>		   	        
+	);
+};
+// const FavoritePicture = ({picture, alt, content}) => {
+// 	return (
+// 		<img className="card-picture" src={picture} alt={alt} />
+// 	);
+// };
 
 const ProjectGif = ({gif, alt, action}) => (
 	<img onClick={action} style={{
@@ -295,16 +402,9 @@ const ProjectGif = ({gif, alt, action}) => (
 const Link = ({link, title}) => (
 	<a href={link} target="_blank" style={{
 		color:"black",
-		textDecoration: "none"
+		textDecoration: "none",
+		margin:'.3em'
 	}}>{title}</a>
 );
-const Links = () => (
-	<React.Fragment>
-		  <a href="#favorite-pics" class="btn">Favorite Pictures</a>
-		  <a href="#projects" class="btn">Projects</a>
-		  <a href="#resume" class="btn">Resume</a>
-		  <a href="#interests" class="btn">Interests</a>
-	</React.Fragment>
-	);
 
 export default App;
