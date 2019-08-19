@@ -11,41 +11,23 @@ import Pali from '../public/pali.jpg';
 import PattyMills from '../public/pattymills.PNG';
 import Smoking from '../public/smoking.jpg';
 import Waikiki from '../public/waikiki.JPG';
+import Killshots from '../public/killshots.jpg'
 
+const pictures = [
+    Makapuu, Tastetea, Charlie, CrouchingLion, Karaoke,
+    MakapuuHike, Momi, Pali, PattyMills, Smoking, Waikiki, Killshots
+];
 
-const FavoritePictures = () => (
+const FavoritePictures = () => {
+    return (
 <>
-    <h2 className="content-title" style={{ color: 'white', background: '#9299FB' }}>Favorite Pictures</h2>
-    <div style={{display:'flex', flexDirection:'column', paddingLeft:'3.5em'}}>
-        <div className="favorites-pics-container" style={{ display: 'flex'}}>
-            <FavoritePicture picture={Makapuu} alt="makapuu" />
-            <FavoritePicture picture={Smoking} alt="makapuu" />
-            <FavoritePicture picture={Pali} alt="makapuu" />
-        </div>
-        <div className="favorites-pics-container" style={{ display: 'flex'}}>
-            <FavoritePicture picture={MakapuuHike} alt="makapuu" />
-            <FavoritePicture picture={Waikiki} alt="makapuu" />
-            <FavoritePicture picture={Charlie} alt="makapuu" />
-        </div>
-        <div className="favorites-pics-container" style={{ display: 'flex'}}>
-            <FavoritePicture picture={CrouchingLion} alt="makapuu" />
-            <FavoritePicture picture={Karaoke} alt="makapuu" />
-            <FavoritePicture picture={Tastetea} alt="makapuu" />
-        </div>
-        <div className="favorites-pics-container" style={{ display: 'flex'}}>
-            <FavoritePicture picture={Momi} alt="makapuu" />
-            <FavoritePicture picture={PattyMills} alt="makapuu" />
-        </div>
-    </div>
+            <h2 className="content-title" style={{ color: 'white', background: '#5FBDF4' }}>Favorite Pictures</h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                {pictures.map(pic => <img src={pic} key={pic} style={{ width: '33.33%' }} alt="picture" />)}
+            </div>
 </>
-);
+)};
 
-const FavoritePicture = ({picture, alt}) => {
-	return (
-		<div className="card-picture" style={{margin:0, width:'33%'}}>
-			<img src={picture} alt={alt}/>
-	 	</div>		   	        
-	);
-};
+
 
 export default FavoritePictures;
