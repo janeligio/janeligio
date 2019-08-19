@@ -54,7 +54,7 @@ const Projects = () => {
                     <div>
                         <Link link="https://github.com/janeligio/hdccproject" title={<FaGithub color="#333" size="2em"/>}/>
                     </div>
-                    <p style={{width:'70%', textAlign:'center'}}>I made this for a company to help inventory network setups of their various job sites.</p>
+                    <p style={{width:'70%', textAlign:'justify'}}>I made this for a company to help inventory network setups of their various job sites.</p>
                 <CSSTransition
                 in={showHDCC}
                 timeout={0}
@@ -85,7 +85,7 @@ const Projects = () => {
                     <div>
                         <Link link="https://github.com/janeligio/jobmelon" title={<FaGithub color="#333" size="2em"/>}/>
                     </div>
-                    <p style={{width:'70%', textAlign:'center'}}>
+                    <p style={{width:'70%', textAlign:'justify'}}>
                         An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.
                     </p>
                     <div style={{display:'flex'}}>
@@ -120,7 +120,7 @@ const Projects = () => {
                     <div>
                         <Link link="https://github.com/shooots/shooots" title={<FaGithub color="#333" size="2em"/>}/>
                     </div>
-                    <p style={{width:'70%', textAlign:'center'}}>
+                    <p style={{width:'70%', textAlign:'justify'}}>
                     Web application for helping the UH community commute to and from campus.
                     </p>
                     <Link link="https://shooots.github.io" title="Docs"/>

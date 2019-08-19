@@ -30,7 +30,7 @@ const Resume = () => (
 				margin:'1em 0'
 			}}>
 				<h4 style={{marginBottom:0}}>Skills</h4>
-				<div style={{display:'flex', flexWrap:'wrap'}}>
+				<div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-around'}}>
 				{ <RatingTable data={[
 					{name: "JavaScript/ES6", rating: 4},
 					{name: "React", rating: 4},
@@ -67,26 +67,28 @@ const Section = ({id, title, content}) => (
 
 const RatingTable = ({data}) => {
 return (
-  <table style={{width:'50%'}}>
+  <table style={{width:'40%'}}>
+	  <tbody>
       {
       data.map(skill => {
           const isFloat = skill.rating % 1 !== 0;
-          let elements = [];
-          _.times(Math.trunc(skill.rating), 
-              () => elements = [...elements, <FaStar size=".8em"/>]);
+          let stars = _.times(Math.trunc(skill.rating), 1);
           return (
-              <tr>
-                  <td>{skill.name}</td>
+              <tr key={skill.name}>
                   <td>
-                      {
-                          elements.map(el => el)
-                      }
-                      { isFloat && <FaStarHalfAlt size=".8em"/>}	
-                  </td>
+					  {skill.name}
+					  <div>                  
+					  {
+						  stars.map((star, index) => <FaStar key={index} color="gold" size=".8em" />)
+					  }
+					  {isFloat && <FaStarHalfAlt size=".8em" color="gold"/>}	
+					  </div>
+				  </td>
               </tr>
               );
       })
-      }
+	  }
+	  </tbody>
   </table>
 );
 };

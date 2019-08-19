@@ -47,9 +47,14 @@ header p {
 }
 
 .content-title{ 
-	font-weight: 1000;
+	/* Thick headers */
+	/* font-weight: 1000; */
+	/* font-weight: 1000;
 	font-size: 3em;
-	height: 150px;
+	height: 150px; */
+	padding:0;
+	font-size: 2em;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
