@@ -1,7 +1,6 @@
 
 .App {
 	background: #FFF;
-
 	max-width: 700px;
 }
 
@@ -86,14 +85,8 @@ img.makapuu-picture{
 	.favorite-pics-container {
 	  display: block;
 	}
-  }
-
-  .favorite-pics-container {
-	/* display:flex;
-	flex-direction: row; */
-	/* flex-wrap: wrap; */
-	/* justify-content: center; */
 }
+
 div.card-picture {
 	display: block;
 	flex: 1;
@@ -125,7 +118,7 @@ div.card-picture img:hover {
 
 }
 #projects {
- background: #4A56EA;
+ background: #9299FB;
  color: #FFF;
 }
 
