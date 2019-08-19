@@ -42,8 +42,8 @@ const Resume = () => (
 
 					{name: "Git", rating: 2},
 					{name: "Java", rating: 2},
-					{name: "C", rating: 3},
-					{name: "C++", rating: 2}
+					{name: "C", rating: 2.5},
+					{name: "C++", rating: 1}
 				]}/>
 				}
 				</div>
