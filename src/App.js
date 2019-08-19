@@ -17,6 +17,7 @@ function App() {
 				<Projects />
 				<Resume />
 				<Interests />
+				<FavoritePictures />
 			</main>
 		</div>
 	);
