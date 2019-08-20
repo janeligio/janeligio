@@ -25,7 +25,7 @@ const FavoritePictures = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {pictures.map(pic => <img src={pic} className="fav-pic" key={pic} alt="Favorite" style={{ 
                     width: '33.33%',
-                    paddingBottom: 0
+                    height: 'auto'
                      }}  />)}
             </div>
 </>
