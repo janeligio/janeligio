@@ -1,4 +1,6 @@
 import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 import Makapuu from '../public/makapuu.jpg';
 import Tastetea from '../public/tastetea.JPG';
@@ -21,13 +23,16 @@ const pictures = [
 const FavoritePictures = () => {
     return (
 <>
-            <h2 className="content-title" style={{ color: 'white', background: '#5FBDF4' }}>Favorite Pictures</h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                {pictures.map(pic => <img src={pic} className="fav-pic" key={pic} alt="Favorite" style={{ 
-                    width: '33.33%',
-                    height: 'auto'
-                     }}  />)}
-            </div>
+    <h2 className="content-title" style={{ color: 'white', background: '#5FBDF4' }}>Favorite Pictures</h2>
+    <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay useKeyboardArrows swipeable emulateTouch>
+        {
+            pictures.map(pic => 
+            <div>
+                <img src={pic} alt="Favorite"/>
+           </div>    
+            )
+        }
+    </Carousel>
 </>
 )};
 
