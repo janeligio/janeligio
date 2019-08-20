@@ -78,6 +78,10 @@ img.headshot {
     float: right;
 }
 
+img.fav-pic {
+	--aspect-ratio: 1/1;
+}
+
 @media (max-width: 400px) {
 	.favorite-pics-container {
 	  display: block;
