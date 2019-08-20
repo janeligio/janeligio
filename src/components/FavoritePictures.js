@@ -23,7 +23,10 @@ const FavoritePictures = () => {
 <>
             <h2 className="content-title" style={{ color: 'white', background: '#5FBDF4' }}>Favorite Pictures</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                {pictures.map(pic => <img src={pic} key={pic} style={{ width: '33.33%' }} alt="picture" />)}
+                {pictures.map(pic => <img src={pic} key={pic} alt="Favorite" style={{ 
+                    width: '33.33%',
+                    objectFit: 'contain'
+                     }}  />)}
             </div>
 </>
 )};
