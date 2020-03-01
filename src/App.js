@@ -17,7 +17,7 @@ function App() {
 				<Projects />
 				<Resume />
 				<Interests />
-				<FavoritePictures />
+				{/* <FavoritePictures /> */}
 				<div className="content-title" style={{ color: 'white', background: '#3AA6E6' }}>
 				</div>
 			</main>
