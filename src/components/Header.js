@@ -20,7 +20,7 @@ const Header = () => (
                 <div style={{ flex: 1 }}>
                     <img className="headshot" style={{ height: 150, width: 150 }} src={Headshot} alt="headshot" />
                 </div>
-                <p style={{ flex: 1 }}>Aspiring web developer.</p>
+                <p style={{ flex: 1 }}>Aspiring burger flipper.</p>
             </div>
             <div style={{
                 display: 'flex',
