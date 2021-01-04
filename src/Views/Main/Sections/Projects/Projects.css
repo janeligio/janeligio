@@ -1,0 +1,63 @@
+.card-project {
+	margin: 1em 0;
+	width: 400px;
+	height: 300px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-size: cover;
+    transition: opacity 100ms ease-in-out, 
+				transform 100ms ease;
+	text-decoration: none;
+	color: var(--palette-1-2);
+}
+
+.card-project:hover {
+    opacity: 0.7;
+}
+
+.card-project-content {
+	height: 100% ; 
+	background-color: rgb(38, 38, 38, 0.5);
+}
+
+.card-project-name {
+	margin:0;
+	padding: 0.5em 1em;
+	font-size: 1.5em;
+	font-weight: 100;
+	background-color: var(--palette-1-5);
+}
+
+.card-project-description {
+	padding: 0.5em 1em;
+}
+
+.card-project-tag {
+	list-style-type: none;
+	margin: 0 2px;
+	padding: 0 5px;
+	border-radius: 10px;
+	line-height: normal;
+	font-weight: 500;
+	font-size: 0.9em;
+}
+
+.React {
+	background-color: #61DBFB;
+	color: white;
+}
+
+.Redux {
+	background-color: #764abc;
+}
+
+.MongoDB {
+	background-color:#13aa52;
+}
+
+.ExpressJS {
+	background-color: #010101;
+}
+
+.Meteor {
+	background-color: #ff6a3e;
+}

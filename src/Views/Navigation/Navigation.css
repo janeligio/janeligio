@@ -24,15 +24,20 @@ button.tab {
 	height: 5vh;
 }
 
-button.tab:hover, button.tab:focus {
+button.tab:hover {
     background: var(--palette-1-2);
 }
 
 button.tab:focus {
-    outline: 1px solid #fff;
+    /* outline: 1px solid #fff; */
     /* outline-offset: -4px; */
+    outline: none;
 }
 
 button.tab:active {
     transform: scale(0.99);
+}
+
+button.tab.active {
+    border-bottom: 1px solid var(--palette-1-5);
 }
