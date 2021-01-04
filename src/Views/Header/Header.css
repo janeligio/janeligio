@@ -1,0 +1,40 @@
+header {
+	background: var(--palette-1-4);
+	height: 40vh;
+}
+
+header > h1.name {
+	margin: 0;
+	padding: 2em 2em 1em 2em;
+	display: flex;
+	justify-content: space-around;
+	font-weight: 100;
+	color: var(--palette-1-5);
+}
+
+.header-content {
+	/* border: 1px solid black; */
+	display: flex;
+	justify-content: center;
+}
+
+.headshot {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px solid var(--palette-1-1);
+}
+
+.header-content-text {
+	width: 200px;
+	margin-left: 1em;
+}
+
+a.link-github {
+	color: var(--palette-1-5);
+	text-decoration: none;
+}
+
+a.link-github:hover {
+	text-decoration: underline;
+}
