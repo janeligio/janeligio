@@ -7,9 +7,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
-  display: flex;
-  justify-content: space-around;
-  background: #F5FBFF;
+  /* display: flex;
+  justify-content: space-around; */
+  background: var(--palette-1-2);
 }
 
 code {

@@ -8,18 +8,17 @@ import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Interests from './components/Interests';
 
+const border = {border:'1px solid black'};
 function App() {
 
 	return (
 		<div className="App">
-			<Header />
+			<header style={border}>
+				<h1>Header</h1>
+			</header>
 			<main className="main">
-				<Projects />
-				<Resume />
-				{/* <Interests /> */}
-				{/* <FavoritePictures /> */}
-				<div className="content-title" style={{ color: 'white', background: '#3AA6E6' }}>
-				</div>
+				<div style={border}>Tabs</div>
+				<div style={border}>Content</div>
 			</main>
 		</div>
 	);
