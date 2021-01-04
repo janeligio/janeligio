@@ -8,13 +8,22 @@ import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Interests from './components/Interests';
 
-const border = {border:'1px solid black'};
-function App() {
+import Headshot from './public/janheadshot.jpg';
 
+const border = {border:'1px solid black'};
+
+function App() {
 	return (
 		<div className="App">
-			<header style={border}>
-				<h1>Header</h1>
+			<header>
+				<h1>Jan Iverson Eligio</h1>
+				<div className="header-content">
+					<img className="headshot" src={Headshot} alt="Jan Iverson Eligio's headshot."/>
+					<div className="header-content-text">
+						<p>2020 B.S. Computer Science graduate from UH Manoa. Aspiring software engineer.</p>
+						<a className="link" href="https://github.com/janeligio">GitHub</a>
+					</div>
+				</div>
 			</header>
 			<main className="main">
 				<div style={border}>Tabs</div>
