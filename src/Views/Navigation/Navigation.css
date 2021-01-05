@@ -5,6 +5,8 @@
 }
 
 button.tab {
+    font-family: sans-serif;
+    font-family: 'B612';
 	width: 150px;
     display: inline-block;
     border: none;
@@ -13,7 +15,6 @@ button.tab {
     text-decoration: none;
     background: var(--palette-1-4);
     color: var(--palette-1-5);
-    font-family: sans-serif;
     font-size: 1rem;
     cursor: pointer;
     text-align: center;

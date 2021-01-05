@@ -4,7 +4,8 @@ const Experience = () => {
     return (
         <div>
             <h2>Education</h2>
-            <p>B.S. Computer Science (3.6 GPA) University of Hawaii at Manoa, December 2020</p>
+            <p>B.S. Computer Science (3.6 GPA)</p>
+            <p>University of Hawaii at Manoa, December 2020</p>
                 <ul>
                     <li>Discrete Mathematics I & II</li>
                     <li>Software Engineering I & II</li>
