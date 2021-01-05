@@ -6,7 +6,7 @@ import Navigation from './Views/Navigation/Navigation.js';
 import Main from './Views/Main/Main.js';
 
 function App() {
-	const [ currentTab, setCurrentTab ] = useState('Projects');
+	const [ currentTab, setCurrentTab ] = useState('Experience');
 	return (
 		<div className="App">
 			<Header/>
