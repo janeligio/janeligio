@@ -17,6 +17,7 @@
 .card-project-content {
 	height: 100% ; 
 	background-color: rgb(38, 38, 38, 0.5);
+	position: relative;
 }
 
 .card-project-name {
@@ -27,6 +28,12 @@
 	background-color: var(--palette-1-5);
 }
 
+.card-github-icon {
+	position: absolute;
+	top: 10%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+}
 .card-project-description {
 	padding: 0.5em 20px;
 }

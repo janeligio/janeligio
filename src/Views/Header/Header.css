@@ -1,6 +1,24 @@
 header {
 	background: var(--palette-1-4);
 	height: 40vh;
+	position: relative;
+}
+
+/* Dark Mode */
+header.dark-1 {
+	background: var(--dark-palette-1-1);
+	color: var(--dark-palette-1-2);
+}
+
+.name.dark-1 {
+	color: var(--dark-palette-1-2);
+}
+/************/
+.button-darkmode {
+	position: absolute;
+	top: 10%;
+	left: 90%;
+	transform: translate(-50%, -50%);
 }
 
 header > h1.name {

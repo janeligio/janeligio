@@ -1,5 +1,6 @@
 import React from 'react';
 import './Projects.css';
+import { FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
     return (
@@ -22,6 +23,7 @@ const ProjectCard = props => {
 		<a className="card-project" href={github} target="_blank" rel="noopener noreferrer" style={{backgroundImage: `url(${cover})`}}>
             <div className="card-project-content" style={{}}>
                 <h3 className="card-project-name">{name}</h3>
+                <span className="card-github-icon"><FaGithub size="2em"/></span>
                 <p className="card-project-description">{description}</p>
                 <ul style={{display:'flex'}}>
                     {technology.map(t => {

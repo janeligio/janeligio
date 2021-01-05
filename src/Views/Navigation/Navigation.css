@@ -42,3 +42,24 @@ button.tab:active {
 button.tab.active {
     border-bottom: 1px solid var(--palette-1-5);
 }
+
+/** Dark Mode **/
+.tabs.dark-1 {
+    background: var(--dark-palette-1-1);
+}
+
+button.tab.dark-1 {
+    background: var(--dark-palette-1-1);
+    color: var(--dark-palette-1-2);
+
+}
+
+button.tab.active.dark-1 {
+    border-bottom: 1px solid var(--dark-palette-1-2);
+}
+
+button.tab.dark-1:hover {
+    background: var(--dark-palette-1-2);
+    color: var(--dark-palette-1-1);
+}
+/**************/

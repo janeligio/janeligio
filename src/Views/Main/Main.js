@@ -6,19 +6,20 @@ import Experience from './Sections/Experience/Experience.js';
 import Contact from './Sections/Contact/Contact.js';
 
 const Main = props => {
+
+    const { currentTab, darkMode } = props;
+
     const Sections = {
-        "Projects": <Projects/>,
-        "Skills": <Skills/>,
-        "Experience": <Experience/>,
-        "Contact": <Contact/>
+        "Projects": <div className={`main-content ${darkMode?'dark-1':''} projects`}><Projects/></div>,
+        "Skills": <div className={`main-content ${darkMode?'dark-1':''} skills`}><Skills/></div>,
+        "Experience": <div className={`main-content ${darkMode?'dark-1':''} experience`}><Experience/></div>,
+        "Contact": <div className={`main-content ${darkMode?'dark-1':''} contact`}><Contact/></div>
     };
 
     return (
-        <main className="main">
-            <div className="main-content-wrapper">
-                <div className="main-content">
-                    { Sections[props.currentTab] }
-                </div>
+        <main className={`${darkMode ? 'dark-1' : ''}`}>
+            <div className={`main-content-wrapper ${darkMode ? 'dark-1' : ''}`}>
+                { Sections[currentTab] }
             </div>
         </main>
     );

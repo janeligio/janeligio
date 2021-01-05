@@ -7,11 +7,12 @@ import Main from './Views/Main/Main.js';
 
 function App() {
 	const [ currentTab, setCurrentTab ] = useState('Projects');
+	const [ darkMode, setDarkMode ] = useState(false);
 	return (
 		<div className="App">
-			<Header/>
-			<Navigation currentTab={currentTab} setCurrentTab={setCurrentTab}/>
-			<Main currentTab={currentTab}/>
+			<Header darkMode={darkMode} setDarkMode={setDarkMode}/>
+			<Navigation darkMode={darkMode} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
+			<Main darkMode={darkMode} currentTab={currentTab}/>
 		</div>
 	);
 }
