@@ -21,14 +21,14 @@
 
 .card-project-name {
 	margin:0;
-	padding: 0.5em 1em;
+	padding: 0.5em 20px;
 	font-size: 1.5em;
 	font-weight: 100;
 	background-color: var(--palette-1-5);
 }
 
 .card-project-description {
-	padding: 0.5em 1em;
+	padding: 0.5em 20px;
 }
 
 .card-project-tag {
