@@ -6,6 +6,7 @@ const Projects = () => {
         <>
             {PROJECT_DATA.map(p => 
                 <ProjectCard
+                    key={p.name}
                     name={p.name} 
                     description={p.description} 
                     technology={p.technology} 
@@ -24,7 +25,7 @@ const ProjectCard = props => {
                 <p className="card-project-description">{description}</p>
                 <ul style={{display:'flex'}}>
                     {technology.map(t => {
-                        return (<Tag name={t}/>);
+                        return (<Tag key={Math.random()} name={t}/>);
                     })}
                 </ul>
             </div>

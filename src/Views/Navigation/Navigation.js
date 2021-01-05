@@ -10,7 +10,7 @@ const Navigation = props => {
       <nav>
         <div className="tabs">
           {
-            tabNames.map(t => <Tab name={t} currentTab={currentTab} changeTab={setCurrentTab}/>)
+            tabNames.map(t => <Tab key={t} name={t} currentTab={currentTab} changeTab={setCurrentTab}/>)
           }
         </div>
       </nav>

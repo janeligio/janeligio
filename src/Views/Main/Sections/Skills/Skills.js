@@ -22,7 +22,7 @@ const Skills = () => {
             <tbody>
                 { DATA.map(o => {
                     return (
-                        <tr>
+                        <tr key={Math.random()}>
                             <td>{o.skill}</td>
                             <td>{o.rating}</td>
                         </tr>
