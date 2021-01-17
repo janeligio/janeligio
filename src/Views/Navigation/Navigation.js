@@ -3,8 +3,9 @@ import './Navigation.css';
 
 const Navigation = props => {
 
-    const tabNames = ['Projects', 'Skills', 'Experience', 'Contact'];
-    const { currentTab, setCurrentTab, darkMode } = props;
+  // const tabNames = ['Projects', 'Skills', 'Experience', 'Contact'];
+  const tabNames = ['Projects', 'Experience', 'Contact'];
+  const { currentTab, setCurrentTab, darkMode } = props;
     
     return (
       <nav>

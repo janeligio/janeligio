@@ -5,6 +5,7 @@
 }
 
 button.tab {
+	height: 45px;
     font-family: sans-serif;
     font-family: 'B612';
 	width: 150px;
@@ -22,7 +23,6 @@ button.tab {
                 transform 100ms ease;
     -webkit-appearance: none;
 	-moz-appearance: none;
-	height: 5vh;
 }
 
 button.tab:hover {

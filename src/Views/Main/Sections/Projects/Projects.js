@@ -21,15 +21,20 @@ const ProjectCard = props => {
     const { name, description, technology, github, cover } = props;
 	return (
 		<a className="card-project" href={github} target="_blank" rel="noopener noreferrer" style={{backgroundImage: `url(${cover})`}}>
-            <div className="card-project-content" style={{}}>
-                <h3 className="card-project-name">{name}</h3>
+            <div className="card-project-content">
                 <span className="card-github-icon"><FaGithub size="2em"/></span>
-                <p className="card-project-description">{description}</p>
-                <ul style={{display:'flex'}}>
-                    {technology.map(t => {
-                        return (<Tag key={Math.random()} name={t}/>);
-                    })}
-                </ul>
+                <div style={{height:'80%'}}>
+                    <h3 className="card-project-name">{name}</h3>
+                    <p className="card-project-description">{description}</p>
+                </div>
+                <div style={{height:'10%'}}>
+                    <ul style={{display:'flex'}}>
+                        {technology.map(t => {
+                            return (<Tag key={Math.random()} name={t}/>);
+                        })}
+                    </ul>
+                </div>
+
             </div>
 		</a>
 	);

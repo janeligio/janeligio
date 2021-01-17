@@ -1,6 +1,6 @@
 header {
 	background: var(--palette-1-4);
-	height: 40vh;
+	/* height: 40vh; */
 	position: relative;
 }
 
