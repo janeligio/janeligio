@@ -3,8 +3,9 @@ import Headshot from '../../public/janheadshot.jpg';
 import './Header.css';
 
 const Header = props => {
-    const { darkMode, setDarkMode } = props;
-    return (
+  // const { darkMode, setDarkMode } = props;
+  const { darkMode } = props;
+  return (
       <header className={`${darkMode ? 'dark-1' : ''}`}>
         <span className="button-darkmode">
           {/* <button onClick={() => setDarkMode(!darkMode)}>
