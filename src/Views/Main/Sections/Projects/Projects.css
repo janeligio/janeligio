@@ -1,5 +1,5 @@
 .card-project {
-	margin: 1em 0;
+	margin: 1em;
 	width: 400px;
 	height: 300px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -74,4 +74,8 @@
 
 .Meteor {
 	background-color: #ff6a3e;
+}
+
+.Node {
+	background-color: #68A063;
 }

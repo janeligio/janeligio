@@ -52,7 +52,7 @@ const Tag = props => {
 const PROJECT_DATA = [
     {
         name: 'HACC 2020',
-        description: "Hawai'i Annual Code Challenge",
+        description: "My Hawai'i Annual Code Challenge (HACC) submission.",
         technology: ['React', 'D3.js'],
         github: 'https://github.com/the-crewmates/hacc2020',
         cover: 'https://images.unsplash.com/photo-1509610696553-9243c1e230f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
@@ -85,6 +85,20 @@ const PROJECT_DATA = [
         github: 'https://github.com/shooots/shooots',
         cover: 'https://images.unsplash.com/photo-1482029255085-35a4a48b7084?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80 '
     },
+    {
+        name: 'Twitch Clouted',
+        description: `View a twitch streamer's most popular viewers.`,
+        technology: ['React', 'Node'],
+        github: 'https://github.com/janeligio/twitch-clouted-server',
+        cover: 'https://images.unsplash.com/photo-1527334919515-b8dee906a34b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        name: 'YTsync',
+        description: 'A web application for those wanting to watch youtube videos together. Features include: live chat, queueing of videos, and a synchronized player.',
+        technology: ['React', 'Socket.io', 'Node'],
+        github: 'https://github.com/janeligio/ytsync-server',
+        cover: 'https://images.unsplash.com/photo-1585231059941-b1e00421587c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
+    }
 
 ];
 
