@@ -85,4 +85,4 @@ yarn-error.log*
 
 .env.development.local
 
-skyblue_color_palette.pdf
+.pdf
