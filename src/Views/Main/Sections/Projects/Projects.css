@@ -1,4 +1,4 @@
-.card-project {
+.card-project, .card-project-2 {
 	margin: 1em;
 	width: 400px;
 	height: 300px;
@@ -11,7 +11,7 @@
 }
 
 .card-project:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .card-project-content {
@@ -36,6 +36,27 @@
 }
 .card-project-description {
 	padding: 0.5em 20px;
+}
+
+.card-project-links {
+	display: flex;
+	height: 5%;
+}
+.card-project-link {
+	font-size: 0.8em;
+	color: white;
+	text-decoration: none;
+	padding: 0.5em;
+	padding-left: 0.75em;
+	margin-left: 0.5em;
+}
+
+.card-project-link:hover {
+	font-size:0.81em;
+	text-decoration: underline;
+}
+.card-project-link:focus {
+	outline: none;
 }
 
 .card-project-tag {
