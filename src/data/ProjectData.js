@@ -48,6 +48,28 @@ const PROJECT_DATA = [
         cover: 'https://images.unsplash.com/photo-1585231059941-b1e00421587c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
     },
     {
+        clickable: false,
+        name: 'Foodie',
+        description: 'A web application that chooses the next place you will eat. Powered by yelp.',
+        technology: ['React', 'Node'],
+        github: 'https://github.com/janeligio/foodie',
+        links: [
+            {
+                href: 'https://goofy-goodall-2ea514.netlify.app',
+                name: 'Live Site',    
+            },
+            {
+                href: 'https://github.com/janeligio/foodie',
+                name: 'React Frontend Repo',    
+            },
+            {
+                href: 'https://github.com/janeligio/foodie-api',
+                name: 'Node Server Repo',    
+            },
+        ],
+        cover: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=970&q=80'
+    },
+    {
         clickable: true,
         name: 'Blue Leopards',
         description: 'ICS 491 Dev Project - Bowfolios Mobile Implementation',
