@@ -7,7 +7,8 @@ export default function Info() {
         <div className="jan-info">
             <LoadingText text="I'm Jan and I'm probably a programmer."/>
         </div>
-    </section>);
+    </section>
+    );
 }
 
 interface LoadingTextProps {

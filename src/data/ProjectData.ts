@@ -24,7 +24,7 @@ const PROJECT_DATA = [
         clickable: true,
         name: 'HDCC Job Sites',
         description: 'I made this for a company to help inventory network setups of their various job sites.',
-        technology: ['React', 'ExpressJS', 'MongoDB'],
+        technology: ['React', 'Express.js', 'MongoDB'],
         github: 'https://github.com/janeligio/hdccproject',
         links: [
             {
@@ -101,7 +101,7 @@ const PROJECT_DATA = [
         clickable: true,
         name: 'Job Melon',
         description: 'An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.',
-        technology: ['React', 'Redux', 'ExpressJS', 'MongoDB'],
+        technology: ['React', 'Redux', 'Express.js', 'MongoDB'],
         github: 'https://github.com/janeligio/jobmelon',
         links: [
             {

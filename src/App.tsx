@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Info from './components/Info/Info';
-import Project from './components/Project/Project';
+import Projects from './components/Projects/Projects';
 import './App.css';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <main>
         <Info/>
         <section className="projects-header"><h1>Projects</h1></section>
-        <Project/>
+        <Projects/>
       </main>
     </div>
   );

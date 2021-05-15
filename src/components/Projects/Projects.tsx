@@ -1,8 +1,8 @@
-import './Project.css';
 import FlipCard from './FlipCard';
 import data from '../../data/ProjectData';
+import './Projects.css';
 
-export default function Project() {
+export default function Projects() {
     return (
         <section key={Math.random()} className="wrapper">
             <div className="cols">
@@ -13,13 +13,3 @@ export default function Project() {
         </section>
     );
 }
-
-/* <section className="project-container">
-    <h2>{data.name}</h2>
-    <div>
-        <img className="Image" src={data.cover}/>
-        <div className="project-pane">
-            <p>{data.description}</p>
-        </div>
-    </div>
-</section> */
