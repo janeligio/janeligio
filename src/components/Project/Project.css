@@ -1,0 +1,29 @@
+.project-container {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+.project-pane {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    
+
+}
+
+.Image {
+    height: 300px;
+}
+
+/* .Image {
+    display: block;
+    max-height: 50%;
+    float: left;
+    width: 25%;
+    margin-right: 3em;
+    margin-left: 3em;
+} */
