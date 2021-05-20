@@ -42,7 +42,7 @@ function ProjectLink(props:any) {
     const [ hover, setHover ] = useState(false);
     const handleHover = () => setHover(!hover);
     return (
-        <a className={`project-link ${hover && 'hover'}`} href={link.href} target="_blank" rel="noopener noreferrer"
+        <a className={`project-link ${hover && 'hover'}`} href={link} target="_blank" rel="noopener noreferrer"
             onMouseEnter={handleHover} onMouseLeave={handleHover}>
             {name}
         </a>);
