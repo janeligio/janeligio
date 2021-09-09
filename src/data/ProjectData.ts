@@ -1,11 +1,39 @@
-const PROJECT_DATA = [
+export interface Project {
+    clickable: boolean;
+    name: string;
+    description: string;
+    cover: string;
+    links: Link[];
+    technologies: Technology[];
+    credits?: string; // Credits to the cover image
+    colorScheme: [HexCode, HexCode];    
+}
+
+export interface Link {
+    name: string; // Type of link (github, website, etc)
+    href: string; 
+}
+
+type HexCode = string;
+
+type Technology = 
+    'React' | 
+    'D3.js' | 
+    'Express.js' | 
+    'MongoDB' | 
+    'Socket.io' | 
+    'Node' | 
+    'React Native' | 
+    'Redux' | 
+    'Meteor';
+
+const PROJECT_DATA: Project[] = [
     {
         clickable: false,
         // name: 'HACC 2020',
         name: `Hawai'i Annual Code Challenge 2020`,
         description: "A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.",
-        technology: ['React', 'D3.js'],
-        github: 'https://github.com/the-crewmates/hacc2020',
+        technologies: ['React', 'D3.js'],
         links: [
             {
                 href: 'https://sharp-borg-ed125d.netlify.app/',
@@ -24,8 +52,7 @@ const PROJECT_DATA = [
         clickable: true,
         name: 'HDCC Job Sites',
         description: 'I made this for a company to help inventory network setups of their various job sites.',
-        technology: ['React', 'Express.js', 'MongoDB'],
-        github: 'https://github.com/janeligio/hdccproject',
+        technologies: ['React', 'Express.js', 'MongoDB'],
         links: [
             {
                 href: 'https://github.com/janeligio/hdccproject',
@@ -39,8 +66,7 @@ const PROJECT_DATA = [
         clickable: false,
         name: 'YTsync',
         description: 'A web application for those wanting to watch youtube videos together. Features include: live chat, queueing of videos, and a synchronized player.',
-        technology: ['React', 'Socket.io', 'Node'],
-        github: 'https://github.com/janeligio/ytsync-server',
+        technologies: ['React', 'Socket.io', 'Node'],
         links: [
             {
                 href: 'https://modest-benz-608ea8.netlify.app',
@@ -62,8 +88,7 @@ const PROJECT_DATA = [
         clickable: false,
         name: 'Foodie',
         description: 'A web application that chooses the next place you will eat. Powered by yelp.',
-        technology: ['React', 'Node'],
-        github: 'https://github.com/janeligio/foodie',
+        technologies: ['React', 'Node'],
         links: [
             {
                 href: 'https://goofy-goodall-2ea514.netlify.app',
@@ -85,8 +110,7 @@ const PROJECT_DATA = [
         clickable: true,
         name: 'Blue Leopards',
         description: 'ICS 491 Dev Project - Bowfolios Mobile Implementation',
-        technology: ['React Native'],
-        github: 'https://github.com/Blue-Leopards/BlueLeopards',
+        technologies: ['React Native'],
         links: [
             {
                 href: 'https://github.com/Blue-Leopards/BlueLeopards',
@@ -101,8 +125,7 @@ const PROJECT_DATA = [
         clickable: true,
         name: 'Job Melon',
         description: 'An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.',
-        technology: ['React', 'Redux', 'Express.js', 'MongoDB'],
-        github: 'https://github.com/janeligio/jobmelon',
+        technologies: ['React', 'Redux', 'Express.js', 'MongoDB'],
         links: [
             {
                 href: 'https://github.com/janeligio/jobmelon',
@@ -116,8 +139,7 @@ const PROJECT_DATA = [
         clickable: false,
         name: 'Twitch Clouted',
         description: `View a twitch streamer's most popular viewers.`,
-        technology: ['React', 'Node'],
-        github: 'https://github.com/janeligio/twitch-clouted-server',
+        technologies: ['React', 'Node'],
         cover: 'https://images.unsplash.com/photo-1527334919515-b8dee906a34b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
         links: [
             {
@@ -139,8 +161,7 @@ const PROJECT_DATA = [
         clickable: true,
         name: 'Shooots',
         description: 'Web application for helping the UH community commute to and from campus.',
-        technology: ['Meteor', 'MongoDB'],
-        github: 'https://github.com/shooots/shooots',
+        technologies: ['Meteor', 'MongoDB'],
         links: [
             {
                 href: 'https://github.com/shooots/shooots',

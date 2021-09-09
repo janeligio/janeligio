@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './FlipCard.css';
 
 export default function FlipCard(props:any) {
-    const { name, description, cover, technology, links, colorScheme } = props.projectData;
+    const { name, description, cover, technologies, links, colorScheme } = props.projectData;
     const [hover, setHover] = useState(false);
 
     const handleTouch = (e:any) => {
@@ -22,7 +22,7 @@ export default function FlipCard(props:any) {
                 <div className="front" style={{background: `url(${cover})`, backgroundSize: 'cover'}}>
                     <div className="inner">
                         <p>{name}</p>
-                        <span>{technology.join(', ')}</span>
+                        <span>{technologies.join(', ')}</span>
                     </div>
                 </div>
                 <div className="back" style={backStyles}>

@@ -36,22 +36,22 @@
     flex-direction: column;
     align-items: center;
     padding: 0 0.5rem;
-    
+    transition: opacity 0.25s;
 }
 
 .gh-icon {
     color: #000;
-    transition: width 0.5s, height 0.5s;
+    /* transition: width 0.5s, height 0.5s; */
 }
 .mail-icon {
     color: #000;
-    transition: width 0.5s, height 0.5s;
+    /* transition: width 0.5s, height 0.5s; */
 }
 
 .header-link:hover {
     opacity: 0.5;
 }
-.gh-icon:hover, .mail-icon:hover {
+/* .gh-icon:hover, .mail-icon:hover {
     height: 2.3rem;
     width: 2.3rem;
-}
+} */
