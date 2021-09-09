@@ -38,7 +38,9 @@ export default function FlipCard(props: any) {
                 </div>
                 <div className="back" style={backStyles}>
                     <div className="inner">
-                        <p>{description}</p>
+                        {description.map((paragraph: string) => (
+                            <p key={Math.random()}>{paragraph}</p>
+                        ))}
                         <p className="project-links">
                             {links.map((link: any) => (
                                 <ProjectLink

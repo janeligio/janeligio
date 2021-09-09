@@ -1,7 +1,6 @@
 export interface Project {
-    clickable: boolean;
     name: string;
-    description: string;
+    description: string[];
     cover: string;
     links: Link[];
     technologies: Technology[];
@@ -17,22 +16,26 @@ export interface Link {
 type HexCode = string;
 
 type Technology = 
-    'React' | 
+    'CSS' | 
     'D3.js' | 
     'Express.js' | 
+    'HTML' | 
+    'Java' | 
+    'Meteor' | 
     'MongoDB' | 
-    'Socket.io' | 
     'Node' | 
     'React Native' | 
+    'React' | 
     'Redux' | 
-    'Meteor';
+    'Sass' | 
+    'Socket.io' | 
+    'TypeScript' ;
 
 const PROJECT_DATA: Project[] = [
     {
-        clickable: false,
         // name: 'HACC 2020',
         name: `Hawai'i Annual Code Challenge 2020`,
-        description: "A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.",
+        description: [`A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`],
         technologies: ['React', 'D3.js'],
         links: [
             {
@@ -49,9 +52,8 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ["9b9f5f","094074"]
     },
     {
-        clickable: true,
         name: 'HDCC Job Sites',
-        description: 'I made this for a company to help inventory network setups of their various job sites.',
+        description: ['I made this for a company to help inventory network setups of their various job sites.'],
         technologies: ['React', 'Express.js', 'MongoDB'],
         links: [
             {
@@ -63,9 +65,8 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ["006A6F","DCB190"]
     },
     {
-        clickable: false,
         name: 'YTsync',
-        description: 'A web application for those wanting to watch youtube videos together. Features include: live chat, queueing of videos, and a synchronized player.',
+        description: ['A web application for those wanting to watch youtube videos together. Features include: live chat, queueing of videos, and a synchronized player.'],
         technologies: ['React', 'Socket.io', 'Node'],
         links: [
             {
@@ -85,9 +86,25 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ["910C0E","000000"]
     },
     {
-        clickable: false,
+        name: 'Snipit',
+        description: ['Save the code snippets you always seem to forget about until you need them the most.'],
+        technologies: ['React', 'Node', 'TypeScript', 'Sass'],
+        cover: 'https://images.unsplash.com/photo-1556809218-7c7e2c57c775?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80',
+        links: [
+            {
+                href: 'https://github.com/janeligio/snipsnip-server',
+                name: 'Server Source Code'
+            },
+            {
+                href: 'https://github.com/joshuahartmann/snipsnip',
+                name: 'Client Source Code'
+            }
+        ],
+        colorScheme: ["0d1b2aff","415a77ff"]
+    },
+    {
         name: 'Foodie',
-        description: 'A web application that chooses the next place you will eat. Powered by yelp.',
+        description: ['A web application that chooses the next place you will eat. Powered by yelp.'],
         technologies: ['React', 'Node'],
         links: [
             {
@@ -104,12 +121,12 @@ const PROJECT_DATA: Project[] = [
             },
         ],
         cover: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=970&q=80',
+        credits: 'https://unsplash.com/photos/W2iQ2hS5wZk',
         colorScheme: ["F3D4C8","715b64"]
     },
     {
-        clickable: true,
         name: 'Blue Leopards',
-        description: 'ICS 491 Dev Project - Bowfolios Mobile Implementation',
+        description: ['ICS 491 Dev Project - Bowfolios Mobile Implementation'],
         technologies: ['React Native'],
         links: [
             {
@@ -122,9 +139,8 @@ const PROJECT_DATA: Project[] = [
 
     },
     {
-        clickable: true,
         name: 'Job Melon',
-        description: 'An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.',
+        description: ['An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.'],
         technologies: ['React', 'Redux', 'Express.js', 'MongoDB'],
         links: [
             {
@@ -136,9 +152,8 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ["FC3941","CDE59A"]
     },
     {
-        clickable: false,
         name: 'Twitch Clouted',
-        description: `View a twitch streamer's most popular viewers.`,
+        description: [`View a twitch streamer's most popular viewers.`],
         technologies: ['React', 'Node'],
         cover: 'https://images.unsplash.com/photo-1527334919515-b8dee906a34b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
         links: [
@@ -158,9 +173,8 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ["28133C","5D3790"]
     },
     {
-        clickable: true,
         name: 'Shooots',
-        description: 'Web application for helping the UH community commute to and from campus.',
+        description: ['Web application for helping the UH community commute to and from campus.'],
         technologies: ['Meteor', 'MongoDB'],
         links: [
             {
