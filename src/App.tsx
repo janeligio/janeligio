@@ -1,19 +1,15 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import Info from './components/Info/Info';
-import Projects from './components/Projects/Projects';
-import './App.css';
+import Carousel from './components/Carousel/Carousel';
+
+import './App.sass';
 
 function App() {
     return (
         <div className="App">
             <Header />
             <main>
-                <Info />
-                <section className="projects-header">
-                    <h1>Projects</h1>
-                </section>
-                <Projects />
+                <Carousel />
             </main>
         </div>
     );

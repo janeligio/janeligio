@@ -1,0 +1,94 @@
+@import '../../styles/_variables'
+
+@mixin boxed
+    border: 1px solid $white
+
+#showcase
+    height: $main-height
+    background: $jet-black
+
+    overflow-y: scroll
+    -webkit-overflow-scrolling: touch
+
+    display: flex
+    justify-content: center
+
+    &::-webkit-scrollbar
+        display: none
+
+    .cards
+        // height: 80%
+        width: 80%
+        max-width: 900px
+
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        justify-content: flex-start
+        @media (max-width: $mobile-width)
+            width: 50%
+
+    .cards > .card
+        // min-width: 280px
+        // max-width: 33.33333%
+        width: 33.3333333%
+
+        // Mobile 
+        @media (max-width: $mobile-width)
+            width: 100%
+
+    .navigation
+        z-index: 10000
+        position: absolute
+        left: 0
+        top: 50%
+        width: 100%
+
+        display: flex
+
+        .filler
+            flex: 1
+
+        &:first-child
+            margin-left: 1rem
+        &:last-child
+            margin-right: 1rem
+
+        .navigation-btn
+            color: $isabelline
+            // @include boxed
+            background: hsla(0, 0%, 0%, 0.5)
+            border-radius: 5px
+            padding: 0.25rem 0.4rem
+            display: flex
+            justify-content: center
+            align-items: center
+
+            button
+                position: relative
+                border: none
+                background: none
+                color: $white
+                font-size: 1.25rem
+
+                transition: all 0.3s ease-in-out
+                &:after
+                    transition: all 0.2s ease-in-out
+                    content: ''
+                    position: absolute
+                    bottom: -0.15rem
+                    left: 50%
+                    width: 0
+                    height: 1px
+                    background-color: $white
+
+                &:hover
+                    cursor: pointer
+
+                &:hover:after
+                    left: 0
+                    width: 100%

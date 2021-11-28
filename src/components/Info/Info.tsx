@@ -1,5 +1,6 @@
 import React from 'react';
-import './Info.css';
+// import './Info.css';
+import './Info.sass';
 
 export default function Info() {
     return (
@@ -15,7 +16,7 @@ interface LoadingTextProps {
     text: string;
 }
 
-function LoadingText(props: LoadingTextProps) {
+export function LoadingText(props: LoadingTextProps) {
     const text = props.text.split('');
     const [renderedText, setRenderedText] = React.useState([text[0]]);
     const [curr, setCurr] = React.useState(1);
