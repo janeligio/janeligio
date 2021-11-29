@@ -19,16 +19,6 @@ export default function Carousel() {
         }
         setCurrentSlide(index);
     };
-    // const prevSlide = () => {
-    //     if (currentSlide > 0) {
-    //         setCurrentSlide(currentSlide - 1);
-    //     }
-    // };
-    // const nextSlide = () => {
-    //     if (currentSlide < SlidesComponents.length - 1) {
-    //         setCurrentSlide(currentSlide + 1);
-    //     }
-    // };
 
     const opts = {
         autoPlay: false,

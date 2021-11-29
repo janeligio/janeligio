@@ -1,46 +1,53 @@
 @import '../../styles/_variables'
-
 @mixin boxed
     border: 1px solid $white
-
-#showcase
+@mixin underline
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: -0.25rem
+        left: 0
+        width: 2.5rem
+        height: 2px
+        background-color: $white
+#about
     height: $main-height
     background: $jet-black
+    position: relative
 
-    overflow-y: scroll
-    -webkit-overflow-scrolling: touch
+    padding: 5rem
 
     display: flex
     justify-content: center
+    align-items: center
 
-    // &::-webkit-scrollbar
-    //     display: none
+    .content
+        color: $isabelline
+        h1,h2
+            text-align: left
+            font-size: 2.5rem
+            font-weight: 300
+            @include underline
 
-    .cards
-        // height: 80%
-        width: 80%
-        max-width: 900px
+            @media (max-width: $mobile-width)
+                font-size: 2rem
 
-        display: -webkit-box
-        display: -ms-flexbox
-        display: flex
-        -ms-flex-wrap: wrap
-        flex-wrap: wrap
-        -webkit-box-pack: center
-        -ms-flex-pack: center
-        justify-content: flex-start
-        @media (max-width: $mobile-width)
-            width: 100%
+        a, p
+            display: block
+            font-size: 1.5rem
+            font-weight: 300
+            line-height: 1.5
+            // @include boxed
+            color: $isabelline
+            text-decoration: none
+            text-align: left
 
-    .cards > .card
-        // min-width: 280px
-        // max-width: 33.33333%
-        width: 33.3333333%
+            &:hover
+                color: white
 
-        // Mobile 
-        @media (max-width: $mobile-width)
-            width: 100%
-
+            @media (max-width: $mobile-width)
+                font-size: 1rem
     .navigation
         z-index: 10000
         position: absolute
@@ -53,23 +60,19 @@
         .filler
             flex: 1
 
-        &:first-child
-            margin-left: 1rem
-        &:last-child
-            margin-right: 1rem
+            &:first-child
+                margin-left: 1rem
+            &:last-child
+                margin-right: 1rem
 
         .navigation-btn
             color: $isabelline
-            // @include boxed
-            // background: hsla(0, 0%, 0%, 0.5)
+            background: $jet-black
             border-radius: 5px
             padding: 0.25rem 0.4rem
             display: flex
             justify-content: center
             align-items: center
-
-            @media (max-width: $mobile-width)
-                display: none
 
             button
                 position: relative
@@ -77,7 +80,6 @@
                 background: none
                 color: $white
                 font-size: 1.25rem
-
                 transition: all 0.3s ease-in-out
                 &:after
                     transition: all 0.2s ease-in-out
@@ -88,10 +90,8 @@
                     width: 0
                     height: 1px
                     background-color: $white
-
                 &:hover
                     cursor: pointer
-
                 &:hover:after
                     left: 0
                     width: 100%

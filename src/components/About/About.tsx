@@ -1,32 +1,34 @@
-import data, { Project } from '../../data/ProjectData';
-import { Slides } from '../Slides/Slides';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-import ParallaxCard from './ParallaxCard/ParallaxCard';
-import './Showcase.sass';
+import { Slides } from '../Slides/Slides';
+import './About.sass';
 
-export default function Showcase({
+export default function About({
     changeSlide,
 }: {
     changeSlide: (index: Slides) => void;
 }) {
     return (
-        <section id="showcase">
-            <div className="cards">
-                {data.map((project: Project) => (
-                    <ParallaxCard {...project} />
-                ))}{' '}
-            </div>
+        <section id="about">
             <div className="navigation">
                 <NavigationButton
-                    handler={() => changeSlide(Slides.Hero)}
-                    label="Home"
+                    handler={() => changeSlide(Slides.Showcase)}
+                    label="Showcase"
                     arrowDirection="left"
                 />
                 <div className="filler"></div>
                 <NavigationButton
-                    handler={() => changeSlide(Slides.About)}
-                    label="About"
+                    handler={() => changeSlide(Slides.Contact)}
+                    label="Contact"
                 />
+            </div>
+            <div className="content">
+                <h1>Education</h1>
+                <p>University of Hawai'i at Manoa</p>
+                <p>B.S. Computer Science</p>
+                <h2>Currently at</h2>
+                <a className="header-link" href="https://broadside.digital">
+                    Broadside Digital
+                </a>
             </div>
         </section>
     );
