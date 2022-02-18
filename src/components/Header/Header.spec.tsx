@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
 import './Header.spec.sass';
 
 export default function Header() {
     return (
         <header id="header">
             <address className="header-links">
-                <a href="/about">About</a>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
                 <a
                     className="header-link"
                     href="https://github.com/janeligio/"
