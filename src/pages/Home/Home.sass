@@ -1,0 +1,73 @@
+@import '../../styles/variables'
+
+#home
+
+    main
+        height: calc(100vh - #{$header-height})
+        background-color: $bdazzled-blue
+        color: $light-cyan
+        display: flex
+    .bio
+        flex: 1
+        text-align: center
+        padding-bottom: 25%
+        h1, h2, p
+            margin: 0
+
+        .inner-container
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+    .projects
+        flex: 1
+        background-color: $light-cyan
+
+        h3
+            text-align: center
+            height: 2.5rem
+            margin: 0
+
+        .projects-container
+            box-sizing: border-box
+            height: calc(100% - 2.5rem)
+            padding: 2rem
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+            gap: 0.25rem
+            grid-template-areas: ". . . . . . . . . . . . . ytsync ytsync ytsync ytsync ytsync ytsync ytsync" ". . . . . hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites ytsync ytsync ytsync ytsync ytsync ytsync ytsync" "blue-leopards blue-leopards blue-leopards blue-leopards blue-leopards hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites ytsync ytsync ytsync ytsync ytsync ytsync ytsync" "blue-leopards blue-leopards blue-leopards blue-leopards blue-leopards hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites hdcc-job-sites ytsync ytsync ytsync ytsync ytsync ytsync ytsync" "blue-leopards blue-leopards blue-leopards blue-leopards blue-leopards snipit snipit snipit snipit snipit snipit snipit snipit ytsync ytsync ytsync ytsync ytsync ytsync ytsync" "blue-leopards blue-leopards blue-leopards blue-leopards blue-leopards snipit snipit snipit snipit snipit snipit snipit snipit ytsync ytsync ytsync ytsync ytsync ytsync ytsync" "blue-leopards blue-leopards blue-leopards blue-leopards blue-leopards snipit snipit snipit snipit snipit snipit snipit snipit . foodie foodie foodie foodie foodie ." "blue-leopards blue-leopards blue-leopards blue-leopards blue-leopards snipit snipit snipit snipit snipit snipit snipit snipit . foodie foodie foodie foodie foodie ." ". job-melon job-melon job-melon job-melon job-melon hacc hacc hacc hacc hacc hacc hacc hacc foodie foodie foodie foodie foodie ." ". job-melon job-melon job-melon job-melon job-melon hacc hacc hacc hacc hacc hacc hacc hacc foodie foodie foodie foodie foodie ." ". job-melon job-melon job-melon job-melon job-melon hacc hacc hacc hacc hacc hacc hacc hacc foodie foodie foodie foodie foodie ." ". job-melon job-melon job-melon job-melon job-melon hacc hacc hacc hacc hacc hacc hacc hacc foodie foodie foodie foodie foodie ." ". job-melon job-melon job-melon job-melon job-melon hacc hacc hacc hacc hacc hacc hacc hacc foodie foodie foodie foodie foodie ." ". job-melon job-melon job-melon job-melon job-melon hacc hacc hacc hacc hacc hacc hacc hacc shooots shooots shooots shooots . ." ". . twitch-clouted twitch-clouted twitch-clouted twitch-clouted hacc hacc hacc hacc hacc hacc hacc hacc shooots shooots shooots shooots . ." ". . twitch-clouted twitch-clouted twitch-clouted twitch-clouted hacc hacc hacc hacc hacc hacc hacc hacc shooots shooots shooots shooots . ." ". . twitch-clouted twitch-clouted twitch-clouted twitch-clouted hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 . . ." ". . twitch-clouted twitch-clouted twitch-clouted twitch-clouted hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 . . ." ". . twitch-clouted twitch-clouted twitch-clouted twitch-clouted hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 . . ." ". . . . . . hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 hacc-2021 . . .";
+
+            align-content: start
+            justify-content: center
+
+            .project
+                box-sizing: border-box
+                height: 100%
+                text-align: center
+                background-size: contain
+                color: $gunmetal
+                margin: auto 0
+
+            .hdcc-job-sites
+                grid-area: hdcc-job-sites
+            .ytsync
+                grid-area: ytsync
+            .snipit
+                grid-area: snipit
+            .blue-leopards
+                grid-area: blue-leopards
+            .foodie
+                grid-area: foodie
+            .hacc
+                grid-area: hacc
+            .job-melon
+                grid-area: job-melon
+            .shooots
+                grid-area: shooots
+            .hacc-2021
+                grid-area: hacc-2021
+            .twitch-clouted
+                grid-area: twitch-clouted

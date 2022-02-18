@@ -1,14 +1,13 @@
 import React from 'react';
-import Carousel from './components/Carousel/Carousel';
-
+import Home from './pages/Home/Home';
 import './App.sass';
+import Header from './components/Header/Header.spec';
 
 function App() {
     return (
         <div className="App">
-            <main>
-                <Carousel />
-            </main>
+            <Header />
+            <Home />
         </div>
     );
 }
