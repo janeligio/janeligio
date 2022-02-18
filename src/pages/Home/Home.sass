@@ -7,18 +7,17 @@
         background-color: $bdazzled-blue
         color: $light-cyan
         display: flex
-        flex-wrap: wrap
 
         @media (max-width: $mobile-width)
             flex-direction: column
+            height: calc(100vh + #{$header-height} + 100vh)
 
             .bio
-                height: 25%
-
-            .projects
-                height: 75%
+                height: calc(100vh - #{$header-height})
                 padding-bottom: 0
 
+            .projects
+                height: 100vh
 
     .bio
         flex: 1
