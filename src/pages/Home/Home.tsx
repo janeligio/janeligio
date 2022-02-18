@@ -8,7 +8,7 @@ export default function Home() {
             <main>
                 <div className="bio">
                     <div className="inner-container">
-                        <h1>Jan Eligio</h1>
+                        <h1>Jan Iverson Eligio</h1>
                         <h2>Software Engineer</h2>
                         <LoadingText text="I'm Jan and I'm a programmer." />
                     </div>

@@ -13,7 +13,7 @@ export default function Header() {
                 >
                     GitHub
                 </a>
-                <a className="header-link" href="mailto:jeligio808@gmail.com">
+                <a className="header-link" href="mailto:inquire@janeligio.com">
                     Email
                 </a>
             </address>
