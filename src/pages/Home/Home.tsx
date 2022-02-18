@@ -26,17 +26,9 @@ export default function Home() {
                                     backgroundRepeat: 'no-repeat',
                                 }}
                             >
-                                {i.name}
+                                <h4>{i.name}</h4>
                             </div>
                         ))}
-                        <div
-                            className="project hacc-2021"
-                            style={{
-                                backgroundColor: '#f5f5f5',
-                            }}
-                        >
-                            HACC 2022
-                        </div>
                     </div>
                 </div>
             </main>

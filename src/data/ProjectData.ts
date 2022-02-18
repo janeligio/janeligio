@@ -16,7 +16,8 @@ export interface Link {
 
 type HexCode = string;
 
-type Technology = 
+type Technology =
+    'ArcGIS' |
     'CSS' | 
     'D3.js' | 
     'Express.js' | 
@@ -34,7 +35,6 @@ type Technology =
 
 const PROJECT_DATA: Project[] = [
     {
-        // name: 'HACC 2020',
         name: `Hawai'i Annual Code Challenge 2020`,
         classname: 'hacc',
         description: [`A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`],
@@ -51,6 +51,26 @@ const PROJECT_DATA: Project[] = [
         ],
         cover: 'https://images.unsplash.com/photo-1509610696553-9243c1e230f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
         credits: 'https://unsplash.com/photos/g3esK1uXCjM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
+        colorScheme: ["9b9f5f","094074"]
+    },
+    {
+        // name: 'HACC 2020',
+        name: `Hawai'i Annual Code Challenge 2021`,
+        classname: 'hacc-2021',
+        description: [`A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`],
+        technologies: ['React', 'ArcGIS'],
+        links: [
+            {
+                href: 'https://relaxed-lovelace-39f067.netlify.app',
+                name: 'Live Site'
+            },
+            {
+                href: 'https://github.com/janeligio/hawaii-trails',
+                name: 'Source Code'
+            },
+        ],
+        cover: 'https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
+        credits: 'https://unsplash.com/@petervanosdall',
         colorScheme: ["9b9f5f","094074"]
     },
     {
