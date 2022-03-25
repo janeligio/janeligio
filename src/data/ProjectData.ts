@@ -36,7 +36,7 @@ type Technology =
 const PROJECT_DATA: Project[] = [
     {
         name: `Hawai'i Annual Code Challenge 2020`,
-        classname: 'hacc',
+        classname: 'hacc-2020',
         description: [`A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`],
         technologies: ['React', 'D3.js'],
         links: [
