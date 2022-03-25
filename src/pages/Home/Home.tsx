@@ -7,14 +7,15 @@ import { Link } from 'react-router-dom';
 import './Home.sass';
 
 export default function Home() {
+    const bio =
+        'My name is Jan Iverson Eligio, a Software Engineer based in Honolulu.';
     return (
         <div id="home">
             <main>
                 <div className="hero-container">
                     <div>
                         <h1 className="bio">
-                            My name is Jan Iverson Eligio, a Software Engineer
-                            based in Honolulu.
+                            <LoadingText text={bio} />
                         </h1>
                     </div>
                     <div className="links">

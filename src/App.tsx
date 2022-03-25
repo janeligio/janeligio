@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header/Header.spec';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
+import Project from './pages/Project/Project';
 import './App.sass';
 
 function App() {
@@ -14,11 +13,8 @@ function App() {
                     <Route path="/" exact>
                         <Home />
                     </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/project/:projectName">
-                        <h1>Project</h1>
+                    <Route path="/projects/:projectName">
+                        <Project />
                     </Route>
                 </Switch>
             </div>
