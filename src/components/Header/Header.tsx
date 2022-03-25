@@ -1,5 +1,6 @@
 import { AiFillMail, AiFillGithub } from 'react-icons/ai';
-import './Header.css';
+import './Header.sass';
+
 export default function Header() {
     return (
         <header className="Header">

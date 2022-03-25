@@ -1,0 +1,97 @@
+@import '../../styles/_variables'
+@mixin boxed
+    border: 1px solid $white
+@mixin underline
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: -0.25rem
+        left: 0
+        width: 2.5rem
+        height: 2px
+        background-color: $white
+#about
+    height: $main-height
+    background: $jet-black
+    position: relative
+
+    padding: 5rem
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .content
+        color: $isabelline
+        h1,h2
+            text-align: left
+            font-size: 2.5rem
+            font-weight: 300
+            @include underline
+
+            @media (max-width: $mobile-width)
+                font-size: 2rem
+
+        a, p
+            display: block
+            font-size: 1.5rem
+            font-weight: 300
+            line-height: 1.5
+            // @include boxed
+            color: $isabelline
+            text-decoration: none
+            text-align: left
+
+            &:hover
+                color: white
+
+            @media (max-width: $mobile-width)
+                font-size: 1rem
+    .navigation
+        z-index: 10000
+        position: absolute
+        left: 0
+        top: 1rem
+        width: 100%
+
+        display: flex
+
+        .filler
+            flex: 1
+
+            &:first-child
+                margin-left: 1rem
+            &:last-child
+                margin-right: 1rem
+
+        .navigation-btn
+            color: $isabelline
+            background: $jet-black
+            border-radius: 5px
+            padding: 0.25rem 0.4rem
+            display: flex
+            justify-content: center
+            align-items: center
+
+            button
+                position: relative
+                border: none
+                background: none
+                color: $white
+                font-size: 1.25rem
+                transition: all 0.3s ease-in-out
+                &:after
+                    transition: all 0.2s ease-in-out
+                    content: ''
+                    position: absolute
+                    bottom: -0.15rem
+                    left: 50%
+                    width: 0
+                    height: 1px
+                    background-color: $white
+                &:hover
+                    cursor: pointer
+                &:hover:after
+                    left: 0
+                    width: 100%

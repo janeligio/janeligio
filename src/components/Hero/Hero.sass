@@ -1,0 +1,97 @@
+@import '../../styles/_variables'
+
+@mixin underline
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: -0.25rem
+        left: 0
+        width: 2.5rem
+        height: 2px
+        background-color: $white
+
+@mixin boxed
+    border: 1px solid $white
+
+#hero
+    box-sizing: border-box
+    background: $jet-black
+    color: $isabelline
+    height: $main-height
+
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+
+    padding: 5rem
+
+    p
+        font-size: 1.5rem
+        font-weight: 300
+        line-height: 1.5
+
+    .loading-text
+        font-size: 1.25rem
+        text-align: left
+
+        @media (max-width: $mobile-width)
+            font-size: 1rem
+
+    .hero-section
+
+        @media (max-width: $mobile-width)
+            font-size: 2rem
+
+        h1
+            text-align: left
+            font-size: 2.5rem
+            font-weight: 300
+            @include underline
+
+            @media (max-width: $mobile-width)
+                font-size: 2rem
+
+    .actions
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        margin-top: 1rem
+
+        .slides-btn
+            // display: block
+            position: relative
+            border: none
+            background: $jet-black
+            padding: 0
+            margin: 0
+            color: $isabelline
+            font-size: 1.25rem
+
+            // align-self: flex-end
+            // justify-self: fhelex-end
+
+            // @include boxed
+            transition: all 0.3s ease-in-out
+            &:after
+                transition: all 0.2s ease-in-out
+                content: ''
+                position: absolute
+                bottom: -0.25rem
+                left: 50%
+                width: 0
+                height: 1px
+                background-color: $white
+
+            &:hover
+                cursor: pointer
+
+            &:hover:after
+                left: 0
+                width: 100%
+
+        svg
+            display: inline
+            margin-left: 5px

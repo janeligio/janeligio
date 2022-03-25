@@ -1,5 +1,6 @@
 export interface Project {
     name: string;
+    classname?: string;
     description: string[];
     cover: string;
     links: Link[];
@@ -15,7 +16,8 @@ export interface Link {
 
 type HexCode = string;
 
-type Technology = 
+type Technology =
+    'ArcGIS' |
     'CSS' | 
     'D3.js' | 
     'Express.js' | 
@@ -33,8 +35,8 @@ type Technology =
 
 const PROJECT_DATA: Project[] = [
     {
-        // name: 'HACC 2020',
         name: `Hawai'i Annual Code Challenge 2020`,
+        classname: 'hacc-2020',
         description: [`A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`],
         technologies: ['React', 'D3.js'],
         links: [
@@ -52,7 +54,28 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ["9b9f5f","094074"]
     },
     {
+        // name: 'HACC 2020',
+        name: `Hawai'i Annual Code Challenge 2021`,
+        classname: 'hacc-2021',
+        description: [`A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`],
+        technologies: ['React', 'ArcGIS'],
+        links: [
+            {
+                href: 'https://relaxed-lovelace-39f067.netlify.app',
+                name: 'Live Site'
+            },
+            {
+                href: 'https://github.com/janeligio/hawaii-trails',
+                name: 'Source Code'
+            },
+        ],
+        cover: 'https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
+        credits: 'https://unsplash.com/@petervanosdall',
+        colorScheme: ["9b9f5f","094074"]
+    },
+    {
         name: 'HDCC Job Sites',
+        classname: 'hdcc-job-sites',
         description: ['I made this for a company to help inventory network setups of their various job sites.'],
         technologies: ['React', 'Express.js', 'MongoDB'],
         links: [
@@ -66,6 +89,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'YTsync',
+        classname: 'ytsync',
         description: ['A web application for those wanting to watch youtube videos together. Features include: live chat, queueing of videos, and a synchronized player.'],
         technologies: ['React', 'Socket.io', 'Node'],
         links: [
@@ -87,6 +111,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'Snipit',
+        classname: 'snipit',
         description: ['Save the code snippets you always seem to forget about until you need them the most.'],
         technologies: ['React', 'Node', 'TypeScript', 'Sass'],
         cover: 'https://images.unsplash.com/photo-1556809218-7c7e2c57c775?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80',
@@ -104,6 +129,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'Foodie',
+        classname: 'foodie',
         description: ['A web application that chooses the next place you will eat. Powered by yelp.'],
         technologies: ['React', 'Node'],
         links: [
@@ -126,6 +152,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'Blue Leopards',
+        classname: 'blue-leopards',
         description: ['ICS 491 Dev Project - Bowfolios Mobile Implementation'],
         technologies: ['React Native'],
         links: [
@@ -140,6 +167,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'Job Melon',
+        classname: 'job-melon',
         description: ['An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.'],
         technologies: ['React', 'Redux', 'Express.js', 'MongoDB'],
         links: [
@@ -153,6 +181,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'Twitch Clouted',
+        classname: 'twitch-clouted',
         description: [`View a twitch streamer's most popular viewers.`],
         technologies: ['React', 'Node'],
         cover: 'https://images.unsplash.com/photo-1527334919515-b8dee906a34b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -174,6 +203,7 @@ const PROJECT_DATA: Project[] = [
     },
     {
         name: 'Shooots',
+        classname: 'shooots',
         description: ['Web application for helping the UH community commute to and from campus.'],
         technologies: ['Meteor', 'MongoDB'],
         links: [

@@ -1,22 +1,10 @@
 import React from 'react';
-// import './Info.css';
-import './Info.sass';
-
-export default function Info() {
-    return (
-        <section className="info">
-            <div className="jan-info">
-                <LoadingText text="I'm Jan and I'm probably a programmer." />
-            </div>
-        </section>
-    );
-}
 
 interface LoadingTextProps {
     text: string;
 }
 
-export function LoadingText(props: LoadingTextProps) {
+export default function LoadingText(props: LoadingTextProps) {
     const text = props.text.split('');
     const [renderedText, setRenderedText] = React.useState([text[0]]);
     const [curr, setCurr] = React.useState(1);
