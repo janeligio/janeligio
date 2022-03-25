@@ -16,12 +16,17 @@
         max-width: 650px
         margin: 0 auto
         padding: 2rem
-        padding-left: 4rem
-        padding-top: 8rem
+        padding: 8rem 2rem 2rem 4rem
+
+        @media (max-width: $mobile-width)
+            height: 100vh
 
         .bio
             font-size: 3rem
             margin: 0
+
+            @media (max-width: $mobile-width)
+                font-size: 2.5rem
 
         .links
             address
@@ -62,6 +67,9 @@
             row-gap: 1px
 
             padding: 1rem
+
+            @media (max-width: $mobile-width)
+                padding: 0
 
         .project
             aspect-ratio: 3/4
