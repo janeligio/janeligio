@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
-import PROJECT_DATA from '../../data/ProjectData';
 import { IoIosArrowForward } from 'react-icons/io';
+import ReactMarkdown from 'react-markdown';
+import PROJECT_DATA from '../../data/ProjectData';
 import './Project.sass';
 
 export default function About() {
@@ -50,6 +51,11 @@ export default function About() {
                     </div>
                     <div className="description">
                         <p>{project?.description}</p>
+                    </div>
+                    <div className="markdown">
+                        <ReactMarkdown>
+                            {project?.markdown?.raw || ''}
+                        </ReactMarkdown>
                     </div>
                 </div>
             </main>
