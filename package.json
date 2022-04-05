@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": ">=12 <15"
+  },
   "name": "janeligio",
   "version": "3.0.0",
   "private": true,
