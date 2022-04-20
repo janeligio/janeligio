@@ -26,7 +26,11 @@ export default function About() {
                         <IoIosArrowForward />
                         <li>{project?.name}</li>
                     </ul>
-                    <h1>{project?.name}</h1>
+                    <h1 className="title">{project?.name}</h1>
+                    <div className="description">
+                        <p>{project?.description}</p>
+                    </div>
+                    <h4>Technologies</h4>
                     <div className="technologies">
                         <ul>
                             {project?.technologies.map((technology) => (
@@ -34,6 +38,7 @@ export default function About() {
                             ))}
                         </ul>
                     </div>
+                    <h4>Links</h4>
                     <div className="links">
                         <ul>
                             {project?.links.map((link) => (
@@ -48,9 +53,6 @@ export default function About() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                    <div className="description">
-                        <p>{project?.description}</p>
                     </div>
                     <div className="markdown">
                         <ReactMarkdown>

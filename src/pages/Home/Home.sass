@@ -3,6 +3,7 @@
 #home
     background-color: $bdazzled-blue
     color: $light-cyan
+
     p, h1, h2, h3, h4, h5, h6
         margin: 0
 
@@ -11,15 +12,12 @@
             box-sizing: border-box
 
     .hero-container
-        min-height: 60vh
+        height: 100vh
         width: 100%
         aspect-ratio: 16/9
         padding: 2rem
         padding: 8rem 2rem 2rem 4rem
         background-color: $gunmetal
-
-        @media (max-width: $mobile-width)
-            height: 100vh
 
         .hero-content
             max-width: 650px
@@ -30,7 +28,7 @@
             margin: 0
 
             @media (max-width: $mobile-width)
-                font-size: 2.5rem
+                font-size: 1.5rem
 
         .links
             address
@@ -56,6 +54,10 @@
                 transition: all 0.2s ease-in-out
                 display: flex
                 align-items: center
+
+                @media (max-width: $mobile-width)
+                    font-size: 1rem
+                    margin-top: 2rem
 
                 &:hover
                     color: $burnt-sienna
@@ -85,6 +87,10 @@
             padding: 1rem
             position: relative
 
+            @media (max-width: $mobile-width)
+                height: 100vh
+                width: 100vw
+
             .project-content
                 z-index: 10
 
@@ -97,12 +103,15 @@
                 top: 0
                 left: 0
                 background: black
-                opacity: 0.25
+                opacity: 0.5
 
             .project-title
+                font-size: 1.5rem
                 font-weight: normal
                 text-align: center
                 position: relative
+                margin: 0 1rem
+                line-height: 1.5
 
                 &::after
                     content: ''
@@ -115,7 +124,10 @@
                     opacity: 0.25
 
             .project-description
-                margin: 1rem 2rem
+                margin: 1rem
+                padding: 0.5rem
+                border-radius: 4px
+                background: rgba(0, 0, 0, 0.75)
 
             .project-technologies
                 padding: 1rem
