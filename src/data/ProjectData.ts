@@ -1,6 +1,7 @@
-import hacc2020MD from './markdown/hacc2020';
-import hacc2021MD from './markdown/hacc2021';
+import hacc2020MD from './markdown/hacc-2020/markdown';
+import hacc2021MD from './markdown/hacc-2021/markdown';
 import oahuBusTrackerMD from './markdown/oahu-bus-tracker/oahu-bus-tracker';
+import twitchCloutedMD from './markdown/twitch-clouted/markdown';
 
 export interface Project {
     name: string;
@@ -271,6 +272,9 @@ const PROJECT_DATA: Project[] = [
             },
         ],
         colorScheme: ['28133C', '5D3790'],
+        markdown: {
+            raw: twitchCloutedMD,
+        },
     },
     {
         name: 'Shooots',
