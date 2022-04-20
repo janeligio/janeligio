@@ -1,4 +1,6 @@
 import hacc2020MD from './markdown/hacc2020';
+import hacc2021MD from './markdown/hacc2021';
+import oahuBusTrackerMD from './markdown/oahu-bus-tracker/oahu-bus-tracker';
 
 export interface Project {
     name: string;
@@ -30,6 +32,7 @@ type Technology =
     | 'Express.js'
     | 'HTML'
     | 'Java'
+    | 'JavaScript'
     | 'Meteor'
     | 'MongoDB'
     | 'Node'
@@ -67,26 +70,70 @@ const PROJECT_DATA: Project[] = [
         },
     },
     {
-        // name: 'HACC 2020',
         name: `Hawai'i Annual Code Challenge 2021`,
         classname: 'hacc-2021',
         description: [
-            `A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`,
+            `A web app to explore the the beautiful hikes of Hawai'i.`,
         ],
-        technologies: ['React', 'ArcGIS'],
+        technologies: [
+            'React',
+            'Sass',
+            'Node',
+            'MongoDB',
+            'ArcGIS',
+            'JavaScript',
+        ],
         links: [
             {
-                href: 'https://relaxed-lovelace-39f067.netlify.app',
-                name: 'Live Site',
+                href: 'https://github.com/janeligio/hawaii-trails',
+                name: 'Frontend Code',
             },
             {
-                href: 'https://github.com/janeligio/hawaii-trails',
-                name: 'Source Code',
+                href: 'https://github.com/joshuahartmann/hawaii-trails-api',
+                name: 'REST API Code',
             },
         ],
-        cover: 'https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
+        cover: 'https://images.unsplash.com/photo-1542332213-31f87348057f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80',
         credits: 'https://unsplash.com/@petervanosdall',
         colorScheme: ['9b9f5f', '094074'],
+        markdown: {
+            raw: hacc2021MD,
+        },
+    },
+    {
+        name: `Oahu Bus Tracker`,
+        classname: 'oahu-bus-tracker',
+        description: [
+            `Never miss a bus again! Track and view incoming buses at your nearest bus stop.`,
+        ],
+        technologies: [
+            'React',
+            'TypeScript',
+            'Sass',
+            'Node',
+            'MongoDB',
+            'ArcGIS',
+        ],
+        links: [
+            {
+                name: 'View it Live',
+                href: 'https://oahu-bus-tracker.netlify.app',
+            },
+            {
+                name: 'Frontend GitHub Repository (Need permission to view)',
+                href: 'https://github.com/janeligio/hawaii-bus-tracker-website',
+            },
+            {
+                name: 'REST API GitHub Repository (Need permission to view)',
+                href: 'https://github.com/janeligio/dabus-api',
+            },
+        ],
+        cover: 'https://images.unsplash.com/photo-1632276536839-84cad7fd03b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+        credits: 'https://unsplash.com/@litvinov',
+        colorScheme: ['9b9f5f', '094074'],
+        markdown: {
+            raw: oahuBusTrackerMD,
+        },
     },
     {
         name: 'HDCC Job Sites',
