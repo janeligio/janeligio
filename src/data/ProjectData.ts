@@ -2,6 +2,7 @@ import hacc2020MD from './markdown/hacc-2020/markdown';
 import hacc2021MD from './markdown/hacc-2021/markdown';
 import oahuBusTrackerMD from './markdown/oahu-bus-tracker/oahu-bus-tracker';
 import twitchCloutedMD from './markdown/twitch-clouted/markdown';
+import ytsyncMD from './markdown/ytsync/markdown';
 
 export interface Project {
     name: string;
@@ -166,15 +167,18 @@ const PROJECT_DATA: Project[] = [
             },
             {
                 href: 'https://github.com/janeligio/ytsync-server',
-                name: 'Server Source Code',
+                name: 'Node Server GitHub',
             },
             {
                 href: 'https://github.com/janeligio/ytsync-client',
-                name: 'Client Source Code',
+                name: 'React Client GitHub',
             },
         ],
         cover: 'https://images.unsplash.com/photo-1585231059941-b1e00421587c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
         colorScheme: ['910C0E', '000000'],
+        markdown: {
+            raw: ytsyncMD,
+        },
     },
     {
         name: 'Snipit',
