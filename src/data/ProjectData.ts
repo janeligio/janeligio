@@ -3,6 +3,7 @@ import hacc2021MD from './markdown/hacc-2021/markdown';
 import oahuBusTrackerMD from './markdown/oahu-bus-tracker/oahu-bus-tracker';
 import twitchCloutedMD from './markdown/twitch-clouted/markdown';
 import ytsyncMD from './markdown/ytsync/markdown';
+import shoootsMD from './markdown/shooots/markdown';
 
 export interface Project {
     name: string;
@@ -286,7 +287,7 @@ const PROJECT_DATA: Project[] = [
         description: [
             'Web application for helping the UH community commute to and from campus.',
         ],
-        technologies: ['Meteor', 'MongoDB'],
+        technologies: ['JavaScript', 'Meteor', 'MongoDB'],
         links: [
             {
                 href: 'https://github.com/shooots/shooots',
@@ -295,6 +296,9 @@ const PROJECT_DATA: Project[] = [
         ],
         cover: 'https://images.unsplash.com/photo-1482029255085-35a4a48b7084?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80',
         colorScheme: ['254b54', 'cae5ff'],
+        markdown: {
+            raw: shoootsMD,
+        },
     },
 ];
 
