@@ -5,6 +5,7 @@ import twitchCloutedMD from './markdown/twitch-clouted/markdown';
 import ytsyncMD from './markdown/ytsync/markdown';
 import shoootsMD from './markdown/shooots/markdown';
 import foodieMD from './markdown/foodie/markdown';
+import jobMelonMD from './markdown/job-melon/markdown';
 
 export interface Project {
     name: string;
@@ -249,10 +250,14 @@ const PROJECT_DATA: Project[] = [
         name: 'Job Melon',
         classname: 'job-melon',
         description: [
-            'An online website for those in need of reliable contractors. Classmate and I created this for a summer class to explore secure coding practices. The first time I implemented authorization in an application.',
+            'An online website for those in need of reliable contractors.',
         ],
         technologies: ['React', 'Redux', 'Express.js', 'MongoDB'],
         links: [
+            {
+                name: 'Wiki',
+                href: 'https://github.com/uh-watermelons/jobmelon/wiki/JobMelon-Wiki',
+            },
             {
                 href: 'https://github.com/janeligio/jobmelon',
                 name: 'Source Code',
@@ -260,6 +265,9 @@ const PROJECT_DATA: Project[] = [
         ],
         cover: 'https://images.unsplash.com/photo-1595475207225-428b62bda831?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
         colorScheme: ['FC3941', 'CDE59A'],
+        markdown: {
+            raw: jobMelonMD,
+        },
     },
     {
         name: 'Twitch Clouted',
