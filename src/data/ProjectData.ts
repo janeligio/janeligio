@@ -4,6 +4,7 @@ import oahuBusTrackerMD from './markdown/oahu-bus-tracker/oahu-bus-tracker';
 import twitchCloutedMD from './markdown/twitch-clouted/markdown';
 import ytsyncMD from './markdown/ytsync/markdown';
 import shoootsMD from './markdown/shooots/markdown';
+import foodieMD from './markdown/foodie/markdown';
 
 export interface Project {
     name: string;
@@ -44,7 +45,8 @@ type Technology =
     | 'Redux'
     | 'Sass'
     | 'Socket.io'
-    | 'TypeScript';
+    | 'TypeScript'
+    | 'Yelp API';
 
 const PROJECT_DATA: Project[] = [
     {
@@ -207,7 +209,7 @@ const PROJECT_DATA: Project[] = [
         description: [
             'A web application that chooses the next place you will eat. Powered by yelp.',
         ],
-        technologies: ['React', 'Node'],
+        technologies: ['React', 'Node', 'TypeScript', 'Yelp API'],
         links: [
             {
                 href: 'https://goofy-goodall-2ea514.netlify.app',
@@ -225,6 +227,9 @@ const PROJECT_DATA: Project[] = [
         cover: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=970&q=80',
         credits: 'https://unsplash.com/photos/W2iQ2hS5wZk',
         colorScheme: ['F3D4C8', '715b64'],
+        markdown: {
+            raw: foodieMD,
+        },
     },
     {
         name: 'Blue Leopards',
