@@ -6,6 +6,7 @@ import ytsyncMD from './markdown/ytsync/markdown';
 import shoootsMD from './markdown/shooots/markdown';
 import foodieMD from './markdown/foodie/markdown';
 import jobMelonMD from './markdown/job-melon/markdown';
+import hdccJobSitesMD from './markdown/hdcc-job-sites/markdown';
 
 export interface Project {
     name: string;
@@ -156,6 +157,9 @@ const PROJECT_DATA: Project[] = [
         ],
         cover: 'https://images.unsplash.com/photo-1588460398188-e5f76c3ef772?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
         colorScheme: ['006A6F', 'DCB190'],
+        markdown: {
+            raw: hdccJobSitesMD,
+        },
     },
     {
         name: 'YTsync',
