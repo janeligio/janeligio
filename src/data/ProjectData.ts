@@ -7,6 +7,7 @@ import shoootsMD from './markdown/shooots/markdown';
 import foodieMD from './markdown/foodie/markdown';
 import jobMelonMD from './markdown/job-melon/markdown';
 import hdccJobSitesMD from './markdown/hdcc-job-sites/markdown';
+import snipitMD from './markdown/snipit/markdown';
 
 export interface Project {
     name: string;
@@ -35,16 +36,20 @@ type Technology =
     | 'ArcGIS'
     | 'CSS'
     | 'D3.js'
+    | 'Express'
     | 'Express.js'
     | 'HTML'
     | 'Java'
     | 'JavaScript'
+    | 'JWT'
     | 'Meteor'
     | 'MongoDB'
     | 'Node'
     | 'React Native'
     | 'React'
     | 'Redux'
+    | 'REST'
+    | 'REST API'
     | 'Sass'
     | 'Socket.io'
     | 'TypeScript'
@@ -189,24 +194,36 @@ const PROJECT_DATA: Project[] = [
         },
     },
     {
-        name: 'Snipit',
+        name: 'Snip.it',
         classname: 'snipit',
         description: [
             'Save the code snippets you always seem to forget about until you need them the most.',
         ],
-        technologies: ['React', 'Node', 'TypeScript', 'Sass'],
+        technologies: [
+            'React',
+            'Sass',
+            'Node',
+            'TypeScript',
+            'Express',
+            'JWT',
+            'MongoDB',
+            'REST API',
+        ],
         cover: 'https://images.unsplash.com/photo-1556809218-7c7e2c57c775?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80',
         links: [
             {
-                href: 'https://github.com/janeligio/snipsnip-server',
+                href: 'https://github.com/janeligio/snipit-api',
                 name: 'Server Source Code',
             },
             {
-                href: 'https://github.com/joshuahartmann/snipsnip',
+                href: 'https://github.com/janeligio/snipit-website',
                 name: 'Client Source Code',
             },
         ],
         colorScheme: ['0d1b2aff', '415a77ff'],
+        markdown: {
+            raw: snipitMD,
+        },
     },
     {
         name: 'Foodie',
