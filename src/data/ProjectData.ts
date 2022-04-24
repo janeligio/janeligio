@@ -57,31 +57,6 @@ type Technology =
 
 const PROJECT_DATA: Project[] = [
     {
-        name: `Hawai'i Annual Code Challenge 2020`,
-        classname: 'hacc-2020',
-        description: [
-            `A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`,
-        ],
-        technologies: ['React', 'D3.js'],
-        links: [
-            {
-                href: 'https://sharp-borg-ed125d.netlify.app/',
-                name: 'Live Site',
-            },
-            {
-                href: 'https://github.com/the-crewmates/hacc2020',
-                name: 'Source Code',
-            },
-        ],
-        cover: 'https://images.unsplash.com/photo-1509610696553-9243c1e230f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-        credits:
-            'https://unsplash.com/photos/g3esK1uXCjM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
-        colorScheme: ['9b9f5f', '094074'],
-        markdown: {
-            raw: hacc2020MD,
-        },
-    },
-    {
         name: `Hawai'i Annual Code Challenge 2021`,
         classname: 'hacc-2021',
         description: [
@@ -110,6 +85,31 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ['9b9f5f', '094074'],
         markdown: {
             raw: hacc2021MD,
+        },
+    },
+    {
+        name: `Hawai'i Annual Code Challenge 2020`,
+        classname: 'hacc-2020',
+        description: [
+            `A data analytics dashboard of the current state of Hawai'i's IT application infrastructure. My Hawai'i Annual Code Challenge (HACC) submission.`,
+        ],
+        technologies: ['React', 'D3.js'],
+        links: [
+            {
+                href: 'https://sharp-borg-ed125d.netlify.app/',
+                name: 'Live Site',
+            },
+            {
+                href: 'https://github.com/the-crewmates/hacc2020',
+                name: 'Source Code',
+            },
+        ],
+        cover: 'https://images.unsplash.com/photo-1509610696553-9243c1e230f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+        credits:
+            'https://unsplash.com/photos/g3esK1uXCjM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
+        colorScheme: ['9b9f5f', '094074'],
+        markdown: {
+            raw: hacc2020MD,
         },
     },
     {
@@ -254,20 +254,6 @@ const PROJECT_DATA: Project[] = [
         },
     },
     {
-        name: 'Blue Leopards',
-        classname: 'blue-leopards',
-        description: ['ICS 491 Dev Project - Bowfolios Mobile Implementation'],
-        technologies: ['React Native'],
-        links: [
-            {
-                href: 'https://github.com/Blue-Leopards/BlueLeopards',
-                name: 'Source Code',
-            },
-        ],
-        cover: 'https://images.unsplash.com/photo-1554026321-fe2a83b9e292?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
-        colorScheme: ['026C96', '01ABC5'],
-    },
-    {
         name: 'Job Melon',
         classname: 'job-melon',
         description: [
@@ -333,6 +319,20 @@ const PROJECT_DATA: Project[] = [
         markdown: {
             raw: shoootsMD,
         },
+    },
+    {
+        name: 'Blue Leopards',
+        classname: 'blue-leopards',
+        description: ['ICS 491 Dev Project - Bowfolios Mobile Implementation'],
+        technologies: ['React Native'],
+        links: [
+            {
+                href: 'https://github.com/Blue-Leopards/BlueLeopards',
+                name: 'Source Code',
+            },
+        ],
+        cover: 'https://images.unsplash.com/photo-1554026321-fe2a83b9e292?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
+        colorScheme: ['026C96', '01ABC5'],
     },
 ];
 
