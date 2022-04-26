@@ -1,3 +1,6 @@
+import landingPage from './media/hacc-2021-landing.png';
+import featurePage from './media/hacc-2021-feature.png';
+
 const md = `
 
 ## Why I Made This
@@ -11,6 +14,16 @@ Users are greeted with the map of Hawai'i that displays all the hikes and trails
 You can create an account and check in to a hike, much like Yelp. This data is gathered to show how busy each hike is as well as which hours of the day and which days of the week are busiest. Busier hikes are colored red on the map while hikes with less traffic are green. This is nice if you want to view hikes that are relatively quiet.
 
 The data is stored in MongoDB and information about the traffic of each hike is kept up-to-date to keep the information relevant.
+
+## Images
+
+Landing Page
+
+![Landing Page](${landingPage})
+
+Trail Page
+
+![Trail Page](${featurePage})
 `;
 
 export default md;
