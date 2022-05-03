@@ -8,6 +8,7 @@ import foodieMD from './markdown/foodie/markdown';
 import jobMelonMD from './markdown/job-melon/markdown';
 import hdccJobSitesMD from './markdown/hdcc-job-sites/markdown';
 import snipitMD from './markdown/snipit/markdown';
+import hawaiiSoccerMD from './markdown/hawaii-soccer/markdown';
 
 export interface Project {
     name: string;
@@ -45,6 +46,7 @@ type Technology =
     | 'Meteor'
     | 'MongoDB'
     | 'Node'
+    | 'Node.js'
     | 'React Native'
     | 'React'
     | 'Redux'
@@ -223,6 +225,36 @@ const PROJECT_DATA: Project[] = [
         colorScheme: ['0d1b2aff', '415a77ff'],
         markdown: {
             raw: snipitMD,
+        },
+    },
+    {
+        name: "Hawai'i Soccer",
+        classname: 'hawaii-soccer',
+        description: ["Find or schedule pick-up soccer games in Hawai'i!"],
+        technologies: [
+            'JavaScript',
+            'React',
+            'Node.js',
+            'CSS',
+            'TypeScript',
+            'Express.js',
+            'MongoDB',
+        ],
+        cover: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
+        credits: 'https://unsplash.com/@concoyne',
+        links: [
+            {
+                href: 'https://github.com/janeligio/hawaii-soccer-server',
+                name: 'Backend Repository',
+            },
+            {
+                href: 'https://github.com/janeligio/hawaii-soccer-client',
+                name: 'Frontend Repository',
+            },
+        ],
+        colorScheme: ['0d1b2aff', '415a77ff'],
+        markdown: {
+            raw: hawaiiSoccerMD,
         },
     },
     {
