@@ -1,9 +1,9 @@
 {
   "engines": {
-    "node": ">=12 <15"
+    "node": ">=12"
   },
   "name": "janeligio",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -14,7 +14,6 @@
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.5",
     "@types/react-router-dom": "^5.3.3",
-    "node-sass": "5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -27,6 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "react-scripts --openssl-legacy-provider start",
     "chrome": "($env:BROWSER = 'chrome') -and (npm start)",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.63.4"
   }
 }

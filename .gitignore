@@ -86,3 +86,5 @@ yarn-error.log*
 .env.development.local
 
 *.pdf
+
+.nvmrc
