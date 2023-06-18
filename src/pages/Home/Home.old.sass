@@ -1,0 +1,159 @@
+@import '../../styles/variables'
+
+#home
+    background-color: $bdazzled-blue
+    color: $light-cyan
+
+    p, h1, h2, h3, h4, h5, h6
+        margin: 0
+
+    main
+        div
+            box-sizing: border-box
+
+    .hero-container
+        height: 100vh
+        width: 100%
+        aspect-ratio: 16/9
+        padding: 2rem
+        padding: 8rem 2rem 2rem 4rem
+        // background-color: $gunmetal
+        background: linear-gradient(0deg, rgb(130, 34, 148), rgb(233, 53, 248))
+        background: linear-gradient(0deg, $gunmetal, lighten($gunmetal, 10%))
+
+        .hero-content
+            max-width: 650px
+            margin: 0 auto
+
+        .bio
+            font-size: 3rem
+            margin: 0
+
+            @media (max-width: $mobile-width)
+                font-size: 1.5rem
+
+        .links
+            address
+                display: flex
+                justify-content: flex-start
+                margin-top: 1rem
+
+                a
+                    margin-left: 1rem
+                    color: $light-cyan
+                    font-size: 1.5rem
+                    text-decoration: none
+                    transition: all 0.2s ease-in-out
+
+                a:hover
+                    color: $burnt-sienna
+
+            .projects-link
+                margin-top: 5rem
+                color: $light-cyan
+                font-size: 1.5rem
+                text-decoration: none
+                transition: all 0.2s ease-in-out
+                display: flex
+                align-items: center
+
+                @media (max-width: $mobile-width)
+                    font-size: 1rem
+                    margin-top: 2rem
+
+                &:hover
+                    color: $burnt-sienna
+
+    .projects-section
+        background: $dark-sky-blue
+
+        .projects-container
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+            background: $gunmetal
+            column-gap: 1px
+            row-gap: 1px
+
+            padding: 1rem
+
+            @media (max-width: $mobile-width)
+                padding: 0
+
+        .project
+            aspect-ratio: 3/4
+            background: $dark-sky-blue
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding: 1rem
+            position: relative
+
+            @media (max-width: $mobile-width)
+                height: 100vh
+                width: 100vw
+
+            .project-content
+                z-index: 10
+
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background: black
+                opacity: 0.5
+
+            .project-title
+                font-size: 1.5rem
+                font-weight: normal
+                text-align: center
+                position: relative
+                margin: 0 1rem
+                line-height: 1.5
+
+                &::after
+                    content: ''
+                    display: block
+                    left: 25%
+                    width: 50%
+                    height: 1px
+                    position: relative
+                    background: $gunmetal
+                    opacity: 0.25
+
+            .project-description
+                margin: 1rem
+                padding: 0.5rem
+                border-radius: 4px
+                background: rgba(0, 0, 0, 0.75)
+
+            .project-technologies
+                padding: 1rem
+                display: flex
+                gap: 0.25rem
+                flex-wrap: wrap
+
+                span
+                    padding: 0.25rem 0.5rem
+                    font-weight: bold
+                    background-color: $gunmetal
+                    color: $dark-sky-blue
+                    border-radius: 0.25rem
+
+            .project-actions
+                margin-top: 1rem
+                padding-left: 1rem
+                a
+                    color: $light-cyan
+                    font-size: 1.5rem
+                    text-decoration: none
+                    transition: all 0.2s ease-in-out
+                    display: flex
+                    align-items: center
+
+                    &:hover
+                        color: $burnt-sienna
