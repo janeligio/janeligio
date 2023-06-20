@@ -34,15 +34,17 @@ export default function About() {
                     <div className="technologies">
                         <ul>
                             {project?.technologies.map((technology) => (
-                                <li>{technology}</li>
+                                <li key={`${projectName}-${technology}`}>
+                                    {technology}
+                                </li>
                             ))}
                         </ul>
                     </div>
                     <h4>Links</h4>
                     <div className="links">
                         <ul>
-                            {project?.links.map((link) => (
-                                <li>
+                            {project?.links.map((link, index) => (
+                                <li key={`${projectName}-link-${index}`}>
                                     <a
                                         href={link.href}
                                         target="_blank"
