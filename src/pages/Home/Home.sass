@@ -8,14 +8,18 @@
     p, h1, h2, h3, h4, h5, h6
         margin: 0
 
-    main
-        div
-            box-sizing: border-box
+    main div
+        box-sizing: border-box
 
     .hero-container
         height: 100vh
         width: 100%
         padding: 5rem 2rem 2rem 4rem
+
+        @media (max-width: $mobile-width)
+            padding: 2rem 0.5rem 1rem
+            display: flex
+            flex-direction: column
 
         .hero-content
             max-width: 800px
@@ -50,6 +54,14 @@
             a:hover
                 color: $burnt-sienna
 
+            @media (max-width: $mobile-width)
+                a
+                    font-size: 1rem
+
+                svg
+                    height: 1rem
+                    width: 1rem
+
     .projects-showcase
 
         margin: 0 auto
@@ -62,6 +74,10 @@
 
         & *
             box-sizing: border-box
+
+        @media (max-width: $mobile-width)
+            margin: 0 auto
+            flex: 1
 
         .content
             flex: 1
@@ -82,6 +98,9 @@
             transition: all 0.2s ease-out
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
 
+            @media (max-width: $mobile-width)
+                height: 75%
+
             &::before
                 content: ''
                 display: block
@@ -97,6 +116,9 @@
                 height: 100%
                 background-position-x: center !important
                 background-position-y: center !important
+
+                @media (max-width: $mobile-width)
+                    height: 80%
 
         .project-title
             font-size: 1.75rem
