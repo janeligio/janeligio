@@ -10,7 +10,10 @@ export default function ProjectShowcase({
         <div className={customClass}>
             <div className="content">
                 {PROJECT_DATA.map((project) => (
-                    <ProjectCard project={project} />
+                    <ProjectCard
+                        key={getProjectId(project)}
+                        project={project}
+                    />
                 ))}
             </div>
         </div>
@@ -25,6 +28,7 @@ function ProjectCard(props: { project: Project }) {
     return (
         <div
             className="project"
+            key={getProjectId(props.project)}
             id={getProjectId(props.project)}
             style={{
                 background: `url(${cover})`,
@@ -42,7 +46,11 @@ function ProjectCard(props: { project: Project }) {
                     </p>
                     <div className="project-technologies">
                         {technologies.map((tech) => (
-                            <span>{tech}</span>
+                            <span
+                                key={`${getProjectId(props.project)}-${tech}`}
+                            >
+                                {tech}
+                            </span>
                         ))}
                     </div>
                     <div className="project-actions">
